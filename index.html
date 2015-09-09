@@ -14,24 +14,39 @@
 
 
     <link href="http://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Italiana' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
     <!--    fonts of "p"-->
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <!--    logo-->
     <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+    <link  rel="stylesheet" href="css/nprogress.css" type="text/css"/>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEpOrlZ05JoR0naq2MLldPwFK5v4FDyHg"></script>
       <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/fakeloader.min.js"></script>
+        <script src="js/nprogress.js"></script>
       
 </head>
 
 <body>
+   <script>
+       $(document).ready(function(){
+           NProgress.start();
+           
+       }
+       
+       
+       );
+       $(window).load(function(){
+                      NProgress.done();
+
+           
+       });
+   </script>
    
-   
+<!--
     <div class="fakeloader"></div>
     
+-->
 
     <div class="header">
         <div class="logo">
@@ -179,6 +194,7 @@
 
     </footer>
    
+<!--
           <script>
             $(document).ready(function(){
                 $(".fakeloader").fakeLoader({
@@ -188,6 +204,7 @@
                 });
             });
         </script>
+-->
    
 
  

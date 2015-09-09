@@ -199,14 +199,13 @@ body,
      position: fixed;
      top: 0;
      height: 100%;
-     background-color: #171717;
+     background-color: #f4f4f4;
      left: 100%;
-     width: 30%;
-     color: #ffffff;
+     width: 60%;
      z-index: 3;
      font-family: 'Roboto', sans-serif;
      font-weight: 600PX;
-     letter-spacing: 4px;
+     letter-spacing: 3px;
  }
  .menu ul {
      list-style-type: none;
@@ -234,12 +233,12 @@ body,
      width: 100%;
      margin-left: auto;
      margin-right: auto;
-     margin-bottom: 5px;
-     letter-spacing: 8px;
+     margin-bottom: 8px;
+     letter-spacing: 6px;
  }
  .menu ul li a {
      text-decoration: none;
-     color: #fff;
+     color: #305199;
  }
  .container-1 {
      width: 100%;

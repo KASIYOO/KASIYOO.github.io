@@ -1,5 +1,12 @@
 $(function(){ 
     
+           NProgress.start();
+           
+       
+       
+    
+     
+    
     $(window).scroll(function () {
     
     
@@ -265,3 +272,10 @@ $(function(){
          window.location.href = window.location.href;
      });
 });
+  
+$(window).load(function(){
+                      NProgress.done();
+    $("#cover").fadeOut();
+
+           
+       });
