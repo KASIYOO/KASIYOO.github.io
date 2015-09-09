@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <script src='/js/jquery-1.11.3.min.js'></script>
+    <style>
+        form {
+            font: normal 12px Arial;
+        }
+        
+        div {
+            padding: 2px;
+        }
+        
+        input,
+        textarea {
+            width: 12em;
+            border: 1px solid #888;
+            outline: none;
+        }
+        
+        input:focus,
+        textarea:focus {
+            border: 1px solid red;
+            background-color: bisque
+        }
+        span{
+            
+            
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>个人基本信息</legend>
+            <div>
+                <label for="username">名称</label>
+                <input id="username" type="text" />
+            </div>
+            <div>
+                <label for="pass">密码</label>
+                <input id="pass" type="text" />
+            </div>
+            <div>
+                <label for="msg">详细信息:</label>
+                <textarea id="msg">
+                </textarea>
+            </div>
+        </fieldset>
+    </form>
+    <form>
+        <div class="msg">
+            <div class="msg_caption">
+                <span class="bigger">放大</span>
+                <span class="smaller">缩小</span>
+            </div>
+            <div>
+                <textarea id="comment" cols="20" rows="8">
+                </textarea>
+            </div>
+        </div>
+
+<form>
+   <div>
+    <input type="checkbox" name="items" value="足球"/>足球
+        <input type="checkbox" name="items" value="篮球"/>篮球
+            <input type="checkbox" name="items" value="乒乓球"/>乒乓球
+                <input type="checkbox" name="items" value="羽毛球"/>羽毛球
+                </div>
+        <div><input type="button" id="CheckedNo" value="全不选"/>
+    <input type="button" id="CheckedAll" value="全选"/>
+            <input type="button" id="CheckedRev" value="反选"/>
+                <input type="button" id="send" value="提交"/>
+   </div>
+
+    
+    
+    
+    
+</form>
+
+
+
+    </form>
+    <script>
+        $(function() {
+            var $comment = $("#comment");
+            $(".bigger").click(function() {
+                    if ($comment.height() < 300) {
+                        $comment.stop().animate({
+                            height: "+=50"
+                        }, 400);
+                    }
+                }
+            );
+            $(".smaller").click(function(){
+                
+              if($comment.height()>40){
+                  
+                  
+                  $comment.stop().animate({ height:"-=50"
+                  },400)
+              }  
+              
+            })
+            
+            var $CheckB=$("[name=items]:checkbox")
+            $("#CheckedAll").click(function(){
+              $("[name=items]:checkbox").attr("checked",true);
+                
+                
+            });
+            $("#CheckedRev").click(function(){
+                
+                $CheckB.each(function(){
+                    
+                    this.checked=!this.checked;
+                });
+            });
+            
+            
+            
+            
+        })
+    </script>
+
+
+
+</body>
+
+</html>
