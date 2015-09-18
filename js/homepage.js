@@ -1,6 +1,9 @@
  $(function () {
 
-
+     NProgress.start();
+    
+                      
+                  
 
      var map;
 
@@ -82,17 +85,17 @@
              map: map,
              title: '仙台市青葉区木町通二丁目６−５１'
          });
-        
-         
-         
-         
-         
-         marker.addListener('click', function() {
-    map.setZoom(15);
-    map.setCenter(marker.getPosition());
-  });
-         
-         
+
+
+
+
+
+         marker.addListener('click', function () {
+             map.setZoom(15);
+             map.setCenter(marker.getPosition());
+         });
+
+
 
          google.maps.event.addListener(map, 'center_changed', function () {
              // 3 seconds after the center of the map has changed, pan back to the
@@ -102,11 +105,8 @@
              }, 1000);
          });
 
-        
+
      }
-
-
-
 
 
      google.maps.event.addDomListener(window, 'load', initialize);
@@ -120,6 +120,9 @@
 
 
      }
+
+
+     //iconmenu animate
      var $logo_a = $("#logo");
      var $a_A = $("#a");
      var $a_S = $("#s");
@@ -127,6 +130,176 @@
      var $a_Y = $("#y");
      var $a_O = $("#o");
      var $a_OO = $("#oo");
+     var ico = $(".iconmenu");
+     var $menu = $(".menu");
+     var $main = $("body");
+     var $menuUl = $(".menu ul");
+     var $header = $(".header");
+     //当鼠标点击菜单
+     var num = 0;
+     ico.click(function (e) {
+
+         if (num++ % 2 === 0) {
+
+ico.addClass("ajust");
+             $menu.css({
+                 left: "60%"
+             });
+
+             $menuUl.css({
+
+                 "padding-left": "90px",
+                 opacity: "1"
+
+
+             });
+             ico.children().css({
+                 "background-color": "#305199"
+             });
+             ico.parent().css({
+                 "border-color": "#305199"
+             });
+             ico.siblings().css({
+                 color: "#305199"
+
+             });
+                     
+
+         } else {
+ico.removeClass("ajust");
+             $menu.css({
+
+                 "left": "100%"
+             });
+             $menuUl.css({
+
+                 "padding-left": "0px",
+                 opacity: "0"
+
+             });
+              ico.children().css({
+                 "background-color": "#fff"
+             });
+             ico.parent().css({
+                 "border-color": "#fff"
+             });
+             ico.siblings().css({
+                 color: "#fff"
+
+             });
+              
+
+         }
+         e.preventDefault(); //阻止元素的默认动作（如果存在） 
+
+
+     });
+
+
+     var frontlayer = $('.mybackgroundlayer');
+     var bglayer = $('.textlayer');
+     var overlay = $('.frontlayer');
+
+
+     var timer;
+
+     function overlaymousemove(e) {
+         var amountMovedX = (e.pageX * 1 / 20);
+         var amountMovedY = (e.pageY * 1 / 20);
+         frontlayer.css({
+             '-webkit-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
+             '-moz-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
+             '-ms-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
+             '-o-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
+             transform: 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)'
+         });
+
+         var amountMovedXbg = (e.pageX * 1 / 15);
+         var amountMovedYbg = (e.pageY * 1 / 15);
+         bglayer.css({
+             '-webkit-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
+             '-moz-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
+             '-ms-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
+             '-o-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
+             'transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)'
+         });
+
+
+
+
+     }
+     overlay.mousemove(overlaymousemove);
+
+
+
+
+
+     $(window).scroll(function () {
+         clearTimeout(timer);
+         overlay.unbind("mousemove");
+
+
+         var toped = $(window).scrollTop();
+
+         var container_Y = toped * 0.4;
+
+
+         $('.mybackgroundlayer').css({
+             top: container_Y
+
+         });
+
+
+         timer = setTimeout(function () {
+             overlay.mousemove(overlaymousemove);
+         }, 500);
+
+
+
+
+
+         var container_1_H = $(".container-1").height();
+
+         var container_2_H = $(".container_2").height();
+
+         if ((toped >= container_1_H && toped < container_1_H + container_2_H - 74) || (toped >= container_1_H && toped < container_1_H + container_2_H - 74 && ico.hasClass("ajust"))
+            ) {
+             ico.children().css({
+                 "background-color": "#305199"
+             });
+             ico.parent().css({
+                 "border-color": "#305199"
+             });
+             ico.siblings().css({
+                 color: "#305199"
+
+             });
+             $logo_a.css({
+                 color: "#305199"
+             });
+
+         } 
+         else{
+
+             ico.children().css({
+                 "background-color": "#fff"
+             });
+             ico.parent().css({
+                 "border-color": "#fff"
+             });
+             ico.siblings().css({
+                 color: "#fff"
+
+             });
+             $logo_a.css({
+                 color: "#fff"
+             });
+         }
+
+     });
+     
+
+
      //logo change
      $logo_a.mouseenter(
          function () {
@@ -272,87 +445,23 @@
 
 
 
-     //if mouse scroll,shadow will appear
-     $(window).scroll(function () {
+     $(window).resize(function () {
 
-         var toped = $(window).scrollTop();
 
-         $('.parallax').css({
-             top: (0 - (toped * 1.75)) + 'px'
+         $menu.css({
+
+             left: "100%",
+
+
          });
 
-         //how the header comes out
-
-         var wintop = $(window).scrollTop();
-         var container_1_H = $(".container-1").height();
-
-         if (wintop >= container_1_H) {
-             $(".header").css("height", "100px");
+         
 
 
-         } else {
-             $(".header").css("height", "0px");
-
-
-         }
-         //         var $logo = $(".logo");
-         //         if (wintop > 50 && wintop < 580) {
-         //             $logo.css("font-size", "60px")
-         //
-         //         } else {
-         //
-         //             $logo.css("font-size", "45px")
-         //
-         //         }
 
      });
 
-     //iconmenu animate
-     var ico = $(".iconmenu");
-     var $menu = $(".menu");
-     var menu_width = $menu.width();
-     var menu_left_0 = $menu.position().left;
-     var menu_left_1 = menu_left_0 - menu_width;
-     var $main = $("body");
-     var main_left_0 = $main.position().left;
-     var main_left_1 = main_left_0 - menu_width;
 
-     var hexiao = false;
-
-
-     //当鼠标点击菜单
-     ico.click(function () {
-
-         if (hexiao)
-
-         {
-
-             $('.menu').stop().animate({
-                 left: menu_left_0
-             }, 400);
-             $('body,.header,.parallax').stop().animate({
-                 left: main_left_0
-             }, 400);
-
-             hexiao = false;
-         } else {
-
-             $('.menu').stop().animate({
-
-                 "left": menu_left_1
-             }, 400);
-
-             $('body,.header,.parallax').stop().animate({
-                 "left": main_left_1
-
-             }, 400);
-
-             hexiao = true;
-
-
-         }
-
-     });
 
      var $link = $(".menu ul li:eq(4)");
      $link.click(function () {
@@ -369,11 +478,18 @@
 
 
      });
+
      //To solve the bug about the location of menu  when resizing  screen.
 
 
-     $(window).bind('resize', function () {
-         window.location.href = window.location.href;
-     });
+     //     $(window).bind('resize', function () {
+     //         window.location.href = window.location.href;
+     //     });
+
+ });
+ $(window).load(function () {
+     NProgress.done();
+     
+
 
  });
