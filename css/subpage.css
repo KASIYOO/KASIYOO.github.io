@@ -291,8 +291,15 @@ html {
      width: 100%;
      background-color: #fff;
      text-align: center;
-    
+     display: table-cell;
+     padding: 100px;
  }
+
+p video{
+    
+    
+    
+}
 .container_2{
                text-align: center;
     width: 100%;

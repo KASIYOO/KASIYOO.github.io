@@ -19,10 +19,10 @@
   NProgress.version = '0.1.2';
 
   var Settings = NProgress.settings = {
-    minimum: 0.08,
+    minimum: 0.1,
     easing: 'ease',
     positionUsing: '',
-    speed: 200,
+    speed: 500,
     trickle: true,
     trickleRate: 0.02,
     trickleSpeed: 800,
