@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+
+    <title>he</title>
+     
+         <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+         <script  type="text/javascript"  src="/js/jquery.pjax.js"></script>
+<style>
+    
+    .kasiyoo{
+        
+        background-color: #ff00d8;
+        width: 1200px;
+        height: 200px;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+   #Content{
+        height: 4000px;
+        width: 100%;
+        position: absolute;
+        z-index: 100001;
+    }
+    .but{
+        width: 300px;
+        height: 300px;
+        background-color: bisque;
+
+        transition: border 0.2s;
+                              border: 0px solid red;
+
+    }
+    .but:hover {
+        background-color: yellow;
+                      border: 3px solid red;
+
+        
+        
+    }
+</style>
+
+</head>
+
+<body>
+<div class="but">
+    
+    
+</div>
+    
+
+<script>
+    
+$(document).pjax('a', '#ka', {fragment:'#logo', timeout:5000});
+  
+    
+    
+    
+    
+</script>
+</body>
+
+</html>

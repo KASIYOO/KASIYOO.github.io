@@ -1,6 +1,9 @@
 $(function () {
 
-
+ $(document).pjax('a.next', '#container_var', {fragment:'#container_var', timeout:5000});
+// $(document).on('pjax:start', function() { $('#cantaine').fadeOut(1000); })
+//    $(document).on('pjax:end',   function() { $('#content').fadeIn(1000);})
+        
 
             NProgress.start();
 
@@ -19,6 +22,28 @@ $(function () {
             var $a_O = $("#o");
             var $a_OO = $("#oo");
             //logo change
+    var $video=$("#keynoteV");
+    var $p=$(".paper p");
+    var nun=0;
+    
+    $p.click(function(){
+        
+        if(nun++%2===0){
+                   document.getElementById('keynoteV').play();
+
+        }
+        
+       else{
+           
+                             document.getElementById('keynoteV').pause();
+ 
+       }         
+        
+        
+        
+        
+        
+    });
             $logo_a.mouseenter(
                 function () {
 
@@ -178,6 +203,9 @@ $(function () {
             var main_left_0 = $main.position().left;
             var $menuUl = $(".menu ul");
             var $header = $(".header");
+         var $moveZ=$(".moveZone");
+    var $back=$("#background");
+
             //当鼠标点击菜单
             var num = 0;
 
@@ -185,123 +213,100 @@ $(function () {
             //当鼠标点击菜单
             ico.click(function (e) {
 
-                if (num++ % 2 === 0) {
+         if (num++ % 2 === 0) {
+             
+             
 
-                    ico.addClass("ajust");
-                    $menu.css({
-                        left: "60%"
-                    });
+             ico.children().css({
+                 "background-color":"#fff"
+                 
+                 
+             });
+             $menu.css({
+                 left: "-=300px"
+             });
 
-                    $menuUl.css({
-
-                        "padding-left": "90px",
-                        opacity: "1"
-
-
-                    });
-                    ico.children().css({
-                        "background-color": "#305199"
-                    });
-                    ico.parent().css({
-                        "border-color": "#305199"
-                    });
-                    ico.siblings().css({
-                        color: "#305199"
-
-                    });
+            $moveZ.css({
+                 left: "-=300px"
+             });
+             $menuUl.css({
+                 "padding-left": "90px",
 
 
-                } else {
-                    ico.removeClass("ajust");
-                    $menu.css({
-
-                        "left": "100%"
-                    });
-                    $menuUl.css({
-
-                        "padding-left": "0px",
-                        opacity: "0"
-
-                    });
-                    ico.children().css({
-                        "background-color": "#fff"
-                    });
-                    ico.parent().css({
-                        "border-color": "#fff"
-                    });
-                    ico.siblings().css({
-                        color: "#fff"
-
-                    });
+                 opacity: "1"
 
 
-                }
-                e.preventDefault(); //阻止元素的默认动作（如果存在） 
+             });
 
 
-            });
+
+         } else {
+             ico.children().css({
+                     "background-color": " #242323"
+
+                 
+             });
+             $menu.css({
+
+                 "left": "100%"
+             });
+          $moveZ.css({
+                 left: "0"
+             });
+
+             $menuUl.css({
+                 "padding-left": "0px",
+
+
+                 opacity: "0"
+
+
+             });
+
+         }
+         e.preventDefault(); //阻止元素的默认动作（如果存在） 
+
+
+     });
 
 
 
             $(window).scroll(function () {
-                var toped = $(window).scrollTop();
+                
+                
+                
+                
+      var toped = $(window).scrollTop();
 
-                var container_1_H = $(".container-1").height();
+         var container_Y = toped * 0.4;
 
-                var container_2_H = $(".container_2").height();
 
-                if ((toped >= container_1_H && toped < container_1_H + container_2_H - 74) || ico.hasClass("ajust")) {
-                    ico.children().css({
-                        "background-color": "#305199"
-                    });
-                    ico.parent().css({
-                        "border-color": "#305199"
-                    });
-                    ico.siblings().css({
-                        color: "#305199"
+    $back.css({
+             top: container_Y
 
-                    });
-                    $logo_a.css({
-                        color: "#305199"
-                    });
+         });
 
-                } else {
-
-                    ico.children().css({
-                        "background-color": "#fff"
-                    });
-                    ico.parent().css({
-                        "border-color": "#fff"
-                    });
-                    ico.siblings().css({
-                        color: "#fff"
-
-                    });
-                    $logo_a.css({
-                        color: "#fff"
-                    });
-                }
 
 
 
             });
 
-
-            var $link = $(".menu ul li:eq(4)");
-            $link.click(function () {
-
-                $('.menu').stop().animate({
-
-                    "left": menu_left_0
-                }, 400);
-
-                $('body,.header,.parallax').stop().animate({
-                    "left": main_left_0
-
-                }, 400);
-
-
-            });
+//
+//            var $link = $(".menu ul li:eq(4)");
+//            $link.click(function () {
+//
+//                $('.menu').stop().animate({
+//
+//                    "left": menu_left_0
+//                }, 400);
+//
+//                $('body,.header,.parallax').stop().animate({
+//                    "left": main_left_0
+//
+//                }, 400);
+//
+//
+//            });
             //To solve the bug about the location of menu  when resizing  screen.
 
 

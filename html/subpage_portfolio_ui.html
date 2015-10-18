@@ -18,6 +18,8 @@
     <link href="/css/subpage.css" rel="stylesheet" type="text/css">
      <link rel="stylesheet" href="/css/nprogress.css" type="text/css"/>
             <script src="/js/nprogress.js" type="text/javascript"></script>
+                        <script src="/js/jquery.pjax.js"></script>
+
 
 
 </head>
@@ -29,7 +31,7 @@
        
     </div>
 
-    <<div class="header">
+    <div class="header">
         <div class="logo">
             <a id="logo" href="/index.html"><span id="k">K</span><span id="a">A</span><span id="s">S</span><span id="i">I</span><span id="y">Y</span><span id="o">O</span><span id="oo">O</span>
         </a></div>
@@ -63,18 +65,19 @@
     </div>
 
 
-
+    <div id="container_var" class="paper">
     <div class="container_2">
         <img src="/image/chongqing.jpg" />
 
     </div>
  
-    <div class="container_3">
-        <a href="subpage_portfolio_web.html">PRE</a>
-        <a href="subpage_portfolio_pro.html">NEXT</a>
+    <div id="container_ui" class="container_3">
+        <a class="pre" href="subpage_portfolio_web.html">PRE</a>
+        <a class="next" href="subpage_portfolio_pro.html">NEXT</a>
 
 
 
+    </div>
     </div>
     <footer>
         <span class="claim">©2015 All rights reserved. <em>He Xiao</em></span>
@@ -88,6 +91,10 @@
 
                <script type="text/javascript" src="/js/subpage.js"></script>
 
+<!--
+<script>$(document).pjax('a', '#Content', {fragment:'#logo', timeout:5000});
+</script>
+-->
 
 
 

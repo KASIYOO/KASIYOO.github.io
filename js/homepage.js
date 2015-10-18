@@ -1,9 +1,9 @@
  $(function () {
 
      NProgress.start();
-    
-                      
-                  
+
+
+
 
      var map;
 
@@ -12,13 +12,16 @@
      var MY_MAPTYPE_ID = 'custom_style';
 
      function initialize() {
+         
+   
+
 
 
          var featureOpts = [
              {
                  stylers: [
                      {
-                         hue: '#305199'
+                         hue:'#292b2f'
                      },
                      {
                          visibility: 'simplified'
@@ -43,7 +46,7 @@
                  featureType: 'water',
                  stylers: [
                      {
-                         color: '#305199'
+                         color: '#e1e1e5'
                      }
       ]
     }
@@ -111,16 +114,6 @@
 
      google.maps.event.addDomListener(window, 'load', initialize);
 
-     var win_H = $(window).width();
-
-     if (win_H <= 600) {
-
-         $(".container_2,.container_3,.container_4").remove();
-
-
-
-     }
-
 
      //iconmenu animate
      var $logo_a = $("#logo");
@@ -135,59 +128,60 @@
      var $main = $("body");
      var $menuUl = $(".menu ul");
      var $header = $(".header");
+     var $moveZ=$(".moveZone")
      //当鼠标点击菜单
      var num = 0;
      ico.click(function (e) {
 
          if (num++ % 2 === 0) {
+             
+             
 
-ico.addClass("ajust");
+             ico.children().css({
+                 "background-color":"#fff"
+                 
+                 
+             });
              $menu.css({
-                 left: "60%"
+                 left: "-=300px"
              });
 
+            $moveZ.css({
+                 left: "-=300px"
+             });
              $menuUl.css({
-
                  "padding-left": "90px",
+
+
                  opacity: "1"
 
 
              });
-             ico.children().css({
-                 "background-color": "#305199"
-             });
-             ico.parent().css({
-                 "border-color": "#305199"
-             });
-             ico.siblings().css({
-                 color: "#305199"
 
-             });
-                     
+
 
          } else {
-ico.removeClass("ajust");
+             ico.children().css({
+                     "background-color": " #242323"
+
+                 
+             });
              $menu.css({
 
                  "left": "100%"
              });
-             $menuUl.css({
+          $moveZ.css({
+                 left: "0"
+             });
 
+             $menuUl.css({
                  "padding-left": "0px",
+
+
                  opacity: "0"
 
-             });
-              ico.children().css({
-                 "background-color": "#fff"
-             });
-             ico.parent().css({
-                 "border-color": "#fff"
-             });
-             ico.siblings().css({
-                 color: "#fff"
 
              });
-              
 
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
@@ -196,47 +190,26 @@ ico.removeClass("ajust");
      });
 
 
-     var frontlayer = $('.mybackgroundlayer');
-     var bglayer = $('.textlayer');
-     var overlay = $('.frontlayer');
+     
+
+    
+  
+     
+     
+     
 
 
-     var timer;
-
-     function overlaymousemove(e) {
-         var amountMovedX = (e.pageX * 1 / 20);
-         var amountMovedY = (e.pageY * 1 / 20);
-         frontlayer.css({
-             '-webkit-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
-             '-moz-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
-             '-ms-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
-             '-o-transform': 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)',
-             transform: 'translate3d(' + amountMovedX + 'px,' + amountMovedY + 'px, 0)'
-         });
-
-         var amountMovedXbg = (e.pageX * 1 / 15);
-         var amountMovedYbg = (e.pageY * 1 / 15);
-         bglayer.css({
-             '-webkit-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
-             '-moz-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
-             '-ms-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
-             '-o-transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)',
-             'transform': 'translate3d(' + amountMovedXbg + 'px,' + amountMovedYbg + 'px, 0)'
-         });
-
-
-
-
-     }
-     overlay.mousemove(overlaymousemove);
 
 
 
 
 
      $(window).scroll(function () {
-         clearTimeout(timer);
-         overlay.unbind("mousemove");
+
+
+         //         
+         //         clearTimeout(timer);
+         //         overlay.unbind("mousemove");
 
 
          var toped = $(window).scrollTop();
@@ -249,56 +222,9 @@ ico.removeClass("ajust");
 
          });
 
-
-         timer = setTimeout(function () {
-             overlay.mousemove(overlaymousemove);
-         }, 500);
-
-
-
-
-
-         var container_1_H = $(".container-1").height();
-
-         var container_2_H = $(".container_2").height();
-
-         if ((toped >= container_1_H && toped < container_1_H + container_2_H - 74) || (toped >= container_1_H && toped < container_1_H + container_2_H - 74 && ico.hasClass("ajust"))
-            ) {
-             ico.children().css({
-                 "background-color": "#305199"
-             });
-             ico.parent().css({
-                 "border-color": "#305199"
-             });
-             ico.siblings().css({
-                 color: "#305199"
-
-             });
-             $logo_a.css({
-                 color: "#305199"
-             });
-
-         } 
-         else{
-
-             ico.children().css({
-                 "background-color": "#fff"
-             });
-             ico.parent().css({
-                 "border-color": "#fff"
-             });
-             ico.siblings().css({
-                 color: "#fff"
-
-             });
-             $logo_a.css({
-                 color: "#fff"
-             });
-         }
+   
 
      });
-     
-
 
      //logo change
      $logo_a.mouseenter(
@@ -444,8 +370,11 @@ ico.removeClass("ajust");
      );
 
 
+      
+    
 
      $(window).resize(function () {
+         
 
 
          $menu.css({
@@ -454,10 +383,6 @@ ico.removeClass("ajust");
 
 
          });
-
-         
-
-
 
      });
 
@@ -489,7 +414,7 @@ ico.removeClass("ajust");
  });
  $(window).load(function () {
      NProgress.done();
-     
+
 
 
  });
