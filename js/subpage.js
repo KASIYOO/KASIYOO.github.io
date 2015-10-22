@@ -1,12 +1,18 @@
 $(function () {
+//     $(document).pjax('a[data-pjax]', '#container_1', {fragment:'#container_1', timeout:5000});
 
- $(document).pjax('a.next', '#container_var', {fragment:'#container_var', timeout:5000});
-// $(document).on('pjax:start', function() { $('#cantaine').fadeOut(1000); })
-//    $(document).on('pjax:end',   function() { $('#content').fadeIn(1000);})
-        
+ $(document).pjax('a[data-pjax]', '#container_var', {fragment:'#container_var', timeout:5000});
+
+    
+//  $(document).pjax('a.pro', '#container_var', {fragment:'#container_var', timeout:5000});
+      
+          
+        $(document).on('pjax:start',   function() { $('#fade').fadeIn(1000);});
+
+    $(document).on('pjax:end',   function() { $('#fade').fadeOut(1000);});
+
 
             NProgress.start();
-
 
 
 
@@ -22,28 +28,7 @@ $(function () {
             var $a_O = $("#o");
             var $a_OO = $("#oo");
             //logo change
-    var $video=$("#keynoteV");
-    var $p=$(".paper p");
-    var nun=0;
-    
-    $p.click(function(){
-        
-        if(nun++%2===0){
-                   document.getElementById('keynoteV').play();
 
-        }
-        
-       else{
-           
-                             document.getElementById('keynoteV').pause();
- 
-       }         
-        
-        
-        
-        
-        
-    });
             $logo_a.mouseenter(
                 function () {
 

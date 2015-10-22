@@ -1,8 +1,12 @@
  $(function () {
 
+      $(document).pjax('a[data-pjax]','#container_var',{fragment:'#container_var',timeout:1000});
+     
+      $(document).on('pjax:start',   function() { $('#fade').show();});
+
+    $(document).on('pjax:end',   function() { $('#fade').fadeOut(2000);});
+
      NProgress.start();
-
-
 
 
      var map;
@@ -12,8 +16,8 @@
      var MY_MAPTYPE_ID = 'custom_style';
 
      function initialize() {
-         
-   
+
+
 
 
 
@@ -21,7 +25,7 @@
              {
                  stylers: [
                      {
-                         hue:'#292b2f'
+                         hue: '#292b2f'
                      },
                      {
                          visibility: 'simplified'
@@ -128,27 +132,75 @@
      var $main = $("body");
      var $menuUl = $(".menu ul");
      var $header = $(".header");
-     var $moveZ=$(".moveZone")
+     var $moveZ = $(".moveZone");
+     var $musical = $(".menu_tool img");
+         var $back=$("#background");
+
      //当鼠标点击菜单
      var num = 0;
+     var mum = 0;
+//解决音乐重复播放
+     
+//$("#logo a").click(function(){
+//    
+//$("#musical").remove();    
+//    
+//    
+//    
+//    
+//    
+//}) ;
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+     //stop musical
+     $musical.click(function (e) {
+         if (mum++ % 2 === 0) {
+             document.getElementById('musical').pause();
+
+             $musical.attr({
+                 "src": "/image/musical%20audio.gif"
+             });
+         } else {
+             document.getElementById('musical').play();
+
+
+             $musical.attr({
+                 "src": "/image/muscial-audio.gif"
+             });
+         }
+
+
+     });
+
      ico.click(function (e) {
 
          if (num++ % 2 === 0) {
-             
-             
+
+
 
              ico.children().css({
-                 "background-color":"#fff"
-                 
-                 
+                 "background-color": "#fff"
+
+
              });
              $menu.css({
                  left: "-=300px"
              });
 
-            $moveZ.css({
-                 left: "-=300px"
-             });
+             //             $moveZ.css({
+             //                 left: "-=300px"
+             //             });
              $menuUl.css({
                  "padding-left": "90px",
 
@@ -162,17 +214,17 @@
 
          } else {
              ico.children().css({
-                     "background-color": " #242323"
+                 "background-color": " #242323"
 
-                 
+
              });
              $menu.css({
 
                  "left": "100%"
              });
-          $moveZ.css({
-                 left: "0"
-             });
+             //             $moveZ.css({
+             //                 left: "0"
+             //             });
 
              $menuUl.css({
                  "padding-left": "0px",
@@ -190,13 +242,6 @@
      });
 
 
-     
-
-    
-  
-     
-     
-     
 
 
 
@@ -206,25 +251,44 @@
 
      $(window).scroll(function () {
 
-
-         //         
-         //         clearTimeout(timer);
-         //         overlay.unbind("mousemove");
-
-
          var toped = $(window).scrollTop();
+        
+         if (toped > 0) {
+             
+             $("#goTopBtn").css("display", "block");
+         } else {
+             $("#goTopBtn").css("display", "none");
+         }
+
+
 
          var container_Y = toped * 0.4;
 
 
-         $('.mybackgroundlayer').css({
+         $back.css({
              top: container_Y
 
          });
 
-   
+
 
      });
+
+
+     $("#goTopBtn").click(function () {
+         var toped = $(window).scrollTop();
+         $('body,html').animate({
+             scrollTop: 0
+         }, 500);
+     });
+
+
+
+
+
+
+
+
 
      //logo change
      $logo_a.mouseenter(
@@ -370,21 +434,20 @@
      );
 
 
-      
-    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
 
-     $(window).resize(function () {
-         
 
 
-         $menu.css({
-
-             left: "100%",
-
-
-         });
-
-     });
 
 
 
@@ -414,6 +477,8 @@
  });
  $(window).load(function () {
      NProgress.done();
+     document.getElementById('musical').play();
+
 
 
 

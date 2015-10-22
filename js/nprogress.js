@@ -138,7 +138,13 @@
     if (!force && !NProgress.status) return this;
 
     return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+      
+      
+      
+      
   };
+    
+    
 /* 代码整理：懒人之家 www.lanrenzhijia.com */
   /**
    * Increments by a random amount.
@@ -195,8 +201,11 @@
    */
 
   NProgress.remove = function() {
+                                $("#mask").fadeOut(150);
+
     $('html').removeClass('nprogress-busy');
     $('#nprogress').remove();
+
   };
 
   /**

@@ -1,3 +1,4 @@
+/*
  body,
  html {
      margin: 0;
@@ -20,14 +21,27 @@ html {
     
 
  }
+*/
+/*
 .moveZone{
     
-    height: 100%;
-    width: 100%;
+    height:100%;
+    width: auto;
     left: 0;
     position: relative;
       transition: left 0.3s linear;
     -webkit-transition: left 0.3s linear;
+}
+#fade{
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    
+    display: none;
+    
 }
  h1,
  h2,
@@ -47,6 +61,7 @@ html {
      background: #fff;
      position: fixed;
  }
+*/
 #background{
     position: absolute;
     z-index: -2;
@@ -61,6 +76,7 @@ background-position: -3px;
     
     
 }
+/*
  @font-face {
      font-family: 'icomoon';
      src: url('/fonts/icomoon.eot?-og9pn');
@@ -78,7 +94,9 @@ background-position: -3px;
      text-transform: none;
      line-height: 1;
  }
+*/
 
+/*
  .header {
     position: relative;
     top: 0px;
@@ -86,9 +104,11 @@ background-position: -3px;
     z-index: 4;
     transition: height 0.5s ease;
 }
+*/
+/*
 
 .logo {
-    /*    font-family: "Fugaz One", sans-serif;*/
+        font-family: "Fugaz One", sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-size: 65px;
     color: #242323;
@@ -101,6 +121,8 @@ background-position: -3px;
     transition: font-size 0.2s linear;
     z-index: 12;
 }
+*/
+/*
 .logo hr{
     margin: 0;
     position: relative;
@@ -114,25 +136,35 @@ background-position: -3px;
     
     
 }
-.logo a {
+*/
+/*.logo a {*/
+/*
     color:  #242323;
     position: relative;
 }
+*/
+/*
 #k {
     position: relative;
     left: -2px;
 }
+*/
+/*
 #a {
-    /*display: none;*/
+    display: none;
     position: relative;
     left: -20px;
     opacity: 0;
 }
+*/
+/*
 #s {
     position: relative;
     left: -20px;
     opacity: 0;
 }
+*/
+/*
 #i {
     position: relative;
     left: -20px;
@@ -149,10 +181,14 @@ background-position: -3px;
     opacity: 0;
 }
 #o {
+*/
+/*
     position: relative;
     left: -20px;
     opacity: 0;
 }
+*/
+/*
 #oo {
     position: relative;
     left: -20px;
@@ -168,6 +204,8 @@ background-position: -3px;
     border: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
+*/
+/*
 .menuText {
     color: #fff;
     font-size: 1rem;
@@ -192,6 +230,8 @@ background-position: -3px;
     width: 29px;
     top: 25px;
 }
+*/
+/*
 .line {
     padding: 0;
     border: 0;
@@ -234,6 +274,8 @@ background-position: -3px;
 
 }
 .iconmenu:hover #top {
+*/
+/*
     transform: rotate(-45deg) translateX(-4px);
     -o-transform: rotate(-45deg) translateX(-4px);
     -ms-transform: rotate(-45deg) translateX(-4px);
@@ -241,6 +283,8 @@ background-position: -3px;
     -webkit-transform: rotate(-45deg) translateX(-4px);
     width: 19px;
 }
+*/
+/*
 .iconmenu:hover #bottom{
     transform: rotate(45deg) translateX(-4px);
     -o-transform: rotate(45deg) translateX(-4px);
@@ -249,9 +293,11 @@ background-position: -3px;
     -webkit-transform: rotate(45deg) translateX(-4px);
     width: 19px;
 }
+*/
 
 /*     right menu   */
 
+/*
 .menu {
     background-color: #242323;
     position: fixed;
@@ -265,8 +311,10 @@ font-family: 'Raleway', sans-serif;
     font-style: normal;
     -webkit-transition: left 0.4s linear;
     transition: left 0.3s linear;
-/*    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.44);*/
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.44);
 }
+*/
+/*
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -290,6 +338,8 @@ font-family: 'Raleway', sans-serif;
     -o-transition: all 0.3s;
     padding: 0;
 }
+*/
+/*
 .menu ul li:hover {
     width: 100%;
     margin-left: auto;
@@ -355,6 +405,8 @@ top: 30%;
     left: 0;
     font-size: 14px;
 }
+*/
+/*
 .icon-facebook2:before {
     content: "\e603";
 }
@@ -385,18 +437,20 @@ top: 30%;
 .contact a:hover .icon-mail {
     left: -14px;
 }
+*/
 
+/*
 .paper{
     width: 100%;
     height: auto;
     margin: 0% auto 0px auto;
-    background-color: #fff;
     
     
     
     
 }
- .container-1 {
+*/
+ .sub_container-1 {
      
      width: 100%;
      text-align: center;
@@ -430,13 +484,13 @@ p video{
     
     
 }
-.container_2{
+.sub_container_2{
                text-align: center;
     width: 100%;
     height: auto;
 
 }
- .container_2 img{
+ .sub_container_2 img{
 
      
      margin:0;
@@ -448,13 +502,13 @@ p video{
 
  
 
- .container_3 {
+ .sub_container_3 {
      width: 100%;
      height: 237px;
 
      
  }
- .container_3 a {
+ .sub_container_3 a {
      float: left;
      width: 50%;
      height: 237px;
@@ -472,7 +526,7 @@ line-height: 237px;
      transition: all 0.2s linear;
      
  }
- .container_3 a:hover {
+ .sub_container_3 a:hover {
      float: left;
      width: 50%;
      height: 237px;
