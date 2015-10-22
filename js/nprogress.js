@@ -201,8 +201,10 @@
    */
 
   NProgress.remove = function() {
-                                $("#mask").fadeOut(150);
 
+                                $("#mask").fadeOut(300);
+           document.getElementById('musical').play();
+      $(".frontlayer").animate({"background-color": 'transparent'}, 2600);
     $('html').removeClass('nprogress-busy');
     $('#nprogress').remove();
 

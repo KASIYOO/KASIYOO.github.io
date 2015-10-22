@@ -138,6 +138,14 @@ height: 130px;
 .icon-IE:before {
     content: "\e7ea";
 }
+
+
+
+
+
+
+
+
 .header {
     height: 140px;
     position: absolute;
@@ -443,6 +451,7 @@ height: 130px;
     background-size: cover;
     background-position: center;
     background-image: url(/svg/title_w.svg);
+    background-color: #000;
 }
 .home_container_1_wrap {
     width: 150%;

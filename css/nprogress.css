@@ -4,7 +4,7 @@ s/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	pointer-events: none;
 }
 #nprogress .bar {
-	background: #305199;
+	background: #262626;
 	position: fixed;
 	z-index: 100;
 	top: 0;
@@ -20,7 +20,7 @@ s/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	right: 0px;
 	width: 100px;
 	height: 100%;
-	box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+/*	box-shadow: 0 0 10px #29d, 0 0 5px #29d;*/
 	opacity: 1.0;
 	-webkit-transform: rotate(3deg) translate(0px, -4px);
 	-ms-transform: rotate(3deg) translate(0px, -4px);
@@ -40,8 +40,8 @@ s/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	height: 18px;
 	box-sizing: border-box;
 	border: solid 2px transparent;
-	border-top-color: #29d;
-	border-left-color: #29d;
+	border-top-color: #262626;
+	border-left-color: #262626;
 	border-radius: 50%;
 	-webkit-animation: nprogress-spinner 400ms linear infinite;
 	animation: nprogress-spinner 400ms linear infinite;

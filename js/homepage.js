@@ -477,7 +477,6 @@
  });
  $(window).load(function () {
      NProgress.done();
-     document.getElementById('musical').play();
 
 
 
