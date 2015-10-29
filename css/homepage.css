@@ -675,12 +675,15 @@ margin-top: 3%;
 .skills {
     margin: 0;
     width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
     padding: 80px 20px 80px 20px;
     text-align: center;
     background-color: #fff;
     background-image: url(/image/skill.jpg);
     background-size: cover;
-    background-position: -2px;
+    overflow-x: hidden;
 }
 .graph-bar {
     background-color: #5683e5;
