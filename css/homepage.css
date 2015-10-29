@@ -660,6 +660,13 @@ color: #fff;
     margin-left: 7%;
 margin-top: 3%;
 }
+
+
+
+
+
+
+
 .skills {
     margin: 0;
     width: 100%;
@@ -703,7 +710,7 @@ margin-top: 3%;
     /* Opera 10.5 */
     -webkit-transform: rotate(-90deg);
     /* Saf3.1+, Chrome */
-}
+} 
 .bar-1 {
     display: inline-block;
     height: 290px;
@@ -769,7 +776,7 @@ margin-top: 3%;
 }
 .contact_me embed {
     width: 70%;
-    margin-top: 26%;
+/*    margin-top: 26%;*/
 }
 .map {
     width: 50%;
