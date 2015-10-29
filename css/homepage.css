@@ -37,6 +37,7 @@ body {
 
         background-image: url(/svg/kasiyoo.svg);
         background-position: center center;
+    background-repeat: no-repeat;
 
 
 }
@@ -51,6 +52,8 @@ body {
     background-position: 150% 50%;
     background-repeat: no-repeat;
     background-color: #5683e5;
+        overflow-x: hidden;
+
     
     
     
@@ -671,13 +674,14 @@ margin-top: 3%;
     background-color: #5683e5;
     display: table-cell;
     margin: 0;
-    margin-right: 2.5%;
     width: 6.2%;
     position: relative;
     opacity: 0.9;
     transition: all 0.25s ease 0s;
     -webkit-transition: all 0.25s ease 0s;
     -webkit-backface-visibility: hidden;
+    text-align: center;
+    margin-right: 2%;
 }
 .graph-bar:hover {
     opacity: 1;
@@ -688,7 +692,7 @@ margin-top: 3%;
     color: #fff;
     font-family: 'Raleway', sans-serif;
     font-size: 1.4rem;
-    left: -34%;
+    left: -39%;
     margin-bottom: 70px;
     position: absolute;
     width: 115px;
