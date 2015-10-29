@@ -12,13 +12,10 @@ html {
 }
 body {
     overflow-x: hidden;
-    background-size: 70%;
-    background-position: 150% 50%;
-    background-repeat: no-repeat;
-    /*    background-color: #c92626;*/
-    background-color: #5683e5;
+   
     font-size: 1.4rem;
-    background-image: url(/image/MY.png);
+        background-color: #242323;
+
 }
 .moveZone {
     height: 100%;
@@ -42,6 +39,21 @@ body {
         background-position: center center;
 
 
+}
+.me{
+    
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-image: url(/image/MY.png);
+      background-size: 70%;
+    background-position: 150% 50%;
+    background-repeat: no-repeat;
+    background-color: #5683e5;
+    
+    
+    
 }
 
 .paper{
@@ -168,23 +180,26 @@ height: 130px;
     transition: font-size 0.2s linear;
     z-index: 12;
 }
+/*
 .logo hr {
     margin: 0;
-    position: relative;
-    top: -22px;
+    position: absolute;
     width: 42px;
-    left: 3px;
     height: 4px;
+    top: 0;
     background-color: #242323;
     border: 0;
 }
+*/
 .logo a {
     color: #242323;
     position: relative;
 }
 #k {
     position: relative;
-    left: -2px;
+    left: -4px;
+    padding: 0;
+    
 }
 #a {
     /*display: none;*/
@@ -383,21 +398,21 @@ height: 130px;
 .menu_tool {
     position: relative;
     top: 30%;
-    left: 89px;
+    left: 91px;
 }
 .menu_tool img {
     width: 20px;
     height: 20px;
 }
 .contact {
-    margin-right: 40px;
+    margin-right: 30px;
 }
 .contact a {
     text-decoration: none;
     display: inline-block;
     position: relative;
     margin-right: 3px;
-    width: 14px;
+    width: 17px;
     overflow-x: hidden;
     color: #7f7f7f;
 }
@@ -409,37 +424,46 @@ height: 130px;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     left: 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 .icon-facebook2:before {
-    content: "\e603";
+    content: "\e795";
 }
+/*
 .icon-facebook2:after {
     content: "\e603";
     color: #3d78f7;
 }
+*/
 .contact a:hover .icon-facebook2 {
-    left: -14px;
+color: #fff;
+
 }
 .icon-twitter2:before {
-    content: "\e605";
+    content: "\e798";
 }
+/*
 .icon-twitter2:after {
     content: "\e605";
     color: #3d78f7;
 }
+*/
 .contact a:hover .icon-twitter2 {
-    left: -14px;
+        color: #fff;
+
+    
 }
 .icon-mail:before {
-    content: "\e602";
+    content: "\e78e";
 }
-.icon-mail:after {
+/*.icon-mail:after {*/
+/*
     content: "\e602";
     color: #3d78f7;
-}
+*/
+/*}*/
 .contact a:hover .icon-mail {
-    left: -14px;
+    color: #fff;
 }
 .frontlayer {
     width: 100%;
@@ -631,6 +655,7 @@ height: 130px;
     width: 55%;
     height: auto;
     margin-left: 7%;
+margin-top: 3%;
 }
 .skills {
     margin: 0;
@@ -661,11 +686,10 @@ height: 130px;
     text-align: left;
     bottom: -8px;
     color: #fff;
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.4rem;
     left: -34%;
     margin-bottom: 70px;
-    margin-left: -3px;
     position: absolute;
     width: 115px;
     transform: rotate(-90deg);
@@ -741,7 +765,6 @@ height: 130px;
 }
 .contact_me embed {
     width: 70%;
-    line-height: 80px;
     margin-top: 26%;
 }
 .map {
@@ -802,7 +825,7 @@ footer span {
 }
 .claim {
     font-size: 11px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     color: #fff;
 }
