@@ -243,14 +243,14 @@
              //             $moveZ.css({
              //                 left: "-=300px"
              //             });
-             $menuUl.css({
-                 "padding-left": "90px",
-
-
-                 opacity: "1"
-
-
-             });
+//             $menuUl.css({
+//                 "padding-left": "90px",
+//
+//
+//                 opacity: "1"
+//
+//
+//             });
 
 
 
@@ -268,14 +268,14 @@
              //                 left: "0"
              //             });
 
-             $menuUl.css({
-                 "padding-left": "0px",
-
-
-                 opacity: "0"
-
-
-             });
+//             $menuUl.css({
+//                 "padding-left": "0px",
+//
+//
+//                 opacity: "0"
+//
+//
+//             });
 
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
@@ -494,13 +494,13 @@
 
 
 
-     //To solve the bug about the location of menu  when resizing  screen.
+//     To solve the bug about the location of menu  when resizing  screen.
 
 
-     //     $(window).bind('resize', function () {
-     //         window.location.href = window.location.href;
-     //     });
-
+//          $(window).bind('resize', function () {
+//              window.location.href = window.location.href;
+//          });
+//
  });
  $(window).load(function () {
      NProgress.done();
