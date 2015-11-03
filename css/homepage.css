@@ -1,3 +1,4 @@
+
 body,
 html {
     margin: 0;
@@ -41,6 +42,8 @@ body {
 
 
 }
+/*desktop layout*/
+@media only screen and (min-width:480px){
 .me{
     
     position: fixed;
@@ -53,11 +56,78 @@ body {
     background-repeat: no-repeat;
     background-color: #5683e5;
         overflow-x: hidden;
+ 
+    
+}
+
+
+.logo {
+    /*    font-family: "Fugaz One", sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 65px;
+    color: #242323;
+    font-weight: 800;
+    line-height: 100px;
+    position: absolute;
+    top: 25px;
+    left: 70px;
+    width: 400px;
+    transition: font-size 0.2s linear;
+    z-index: 12;
+}
+
+
+
+
+
+
+
+
+
+}
+
+/*mobile layout*/
+@media only screen and (max-width: 479px){
+    
+    
+    
+me{
+    
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #5683e5;
+        overflow-x: hidden;
 
     
     
     
 }
+    
+  .logo {
+    /*    font-family: "Fugaz One", sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    color: #242323;
+    font-weight: 800;
+    line-height: 100px;
+    position: absolute;
+    top: 25px;
+    left: 70px;
+    width: 400px;
+    transition: font-size 0.2s linear;
+    z-index: 12;
+}  
+    
+    
+    
+    
+    
+}
+
+
 
 .paper{
     width: 100%;
@@ -161,6 +231,7 @@ height: 130px;
 
 
 
+/*
 .header {
     height: 140px;
     position: absolute;
@@ -169,20 +240,8 @@ height: 130px;
     z-index: 5;
     transition: height 0.5s ease;
 }
-.logo {
-    /*    font-family: "Fugaz One", sans-serif;*/
-    font-family: 'Raleway', sans-serif;
-    font-size: 65px;
-    color: #242323;
-    font-weight: 800;
-    line-height: 100px;
-    position: absolute;
-    top: 25px;
-    left: 70px;
-    width: 400px;
-    transition: font-size 0.2s linear;
-    z-index: 12;
-}
+*/
+
 /*
 .logo hr {
     margin: 0;
@@ -852,7 +911,7 @@ footer span {
 /*sub page css*/
 #background{
     position: absolute;
-    z-index: -2;
+    z-index:-2;
     width: 100%;
     height: 100%;
         background-image: url(/image/skill.jpg);
@@ -870,11 +929,25 @@ background-position: -3px;
      
      width: 100%;
      text-align: center;
-     background-image: url(/svg/portfolio_bg.svg);
-     background-size: cover;
+/*     background-image: url(/svg/portfolio_bg-01.png);*/
      height: 60%;
+    position: relative;
     
  }
+.pro_background{
+    width: 100%;
+   height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    opacity: 0.1;
+    top: 0;
+    margin: 0;
+    background-image: url(/svg/portfolio_bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
 
 .por_rep{
     height:80%;
@@ -897,7 +970,7 @@ background-position: -3px;
 p video{
     width: 100%;
 /*  -webkit-filter:grayscale(0%)*/
-min-height:104%;
+/*min-height:104%;*/
     
     
 }
@@ -960,10 +1033,6 @@ font-family: 'Raleway', sans-serif;
      background-color: #5683e5;
      color: #fff;
  }
-
-
-
-
 
 
 

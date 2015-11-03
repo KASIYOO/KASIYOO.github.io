@@ -151,7 +151,7 @@
 //    
 //}) ;
      
-     
+     //make the "div" in the center
   
       $.fn.center=function(){
         return this.each(function(){
@@ -493,21 +493,6 @@
 
 
 
-     var $link = $(".menu ul li:eq(4)");
-     $link.click(function () {
-
-         $('.menu').stop().animate({
-
-             "left": menu_left_0
-         }, 400);
-
-         $('body,.header,.parallax').stop().animate({
-             "left": main_left_0
-
-         }, 400);
-
-
-     });
 
      //To solve the bug about the location of menu  when resizing  screen.
 
