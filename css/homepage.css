@@ -91,10 +91,23 @@ body {
     margin-bottom: 5%;
     height: auto;
 }
+.home_container_3_title {
+    background-image: url(/svg/BK02.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home_container_3_title embed {
+    width: 55%;
+    height: auto;
+    margin-left: 7%;
+margin-top: 3%;
+}
 
 
-
-
+.contact_me embed {
+    width: 70%;
+/*    margin-top: 26%;*/
+}
 
 
 
@@ -110,7 +123,24 @@ body {
     margin: 0 auto 0% auto;
     height: auto;
 }
-    
+ .graph-bar span.inside {
+    text-align: left;
+    bottom: -8px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    left: -37%;
+    margin-bottom: 70px;
+    position: absolute;
+    width: 115px;
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    /* FF3.5+ */
+    -o-transform: rotate(-90deg);
+    /* Opera 10.5 */
+    -webkit-transform: rotate(-90deg);
+    /* Saf3.1+, Chrome */
+}    
     
 }
 
@@ -119,6 +149,55 @@ body {
 
 
 /*mobile layout*/
+@media only screen and (max-width: 999px){
+    
+    .graph-bar span.inside {
+    text-align: left;
+    bottom: -8px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    left: -60%;
+    margin-bottom: 70px;
+    position: absolute;
+    width: 115px;
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    /* FF3.5+ */
+    -o-transform: rotate(-90deg);
+    /* Opera 10.5 */
+    -webkit-transform: rotate(-90deg);
+    /* Saf3.1+, Chrome */
+} 
+     .home_container_2_title embed {
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: auto;
+} 
+.home_container_3_title embed {
+    width: 75%;
+    height: auto;
+    margin-left: 3%;
+margin-top: 3%;
+}
+   
+  .me{
+    
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-color: #5683e5;
+        overflow-x: hidden;
+ 
+    
+}   
+ .contact_me embed {
+    width: 100%;
+/*    margin-top: 26%;*/
+}      
+}
 @media only screen and (max-width: 639px){
     
   .me{
@@ -132,13 +211,45 @@ body {
  
     
 }
+    .graph-bar span.inside {
+    text-align: left;
+    bottom: -8px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    left: -150%;
+    margin-bottom: 70px;
+    position: absolute;
+    width: 115px;
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    /* FF3.5+ */
+    -o-transform: rotate(-90deg);
+    /* Opera 10.5 */
+    -webkit-transform: rotate(-90deg);
+    /* Saf3.1+, Chrome */
+} 
   .home_container_2_title embed {
     width: 99%;
     margin-top: 5%;
     margin-bottom: 5%;
     height: auto;
 }    
-    
+ .home_container_3_title {
+    background-image: url(/svg/BK02.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+     text-align: center;
+}   
+.home_container_3_title embed {
+    width: 92%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+margin-top: 3%;
+        margin-bottom: 3%;
+
+}
 
     
 .logo {
@@ -165,7 +276,7 @@ body {
     height: auto;
 }  
      
-    
+ 
     
 }
 
@@ -753,17 +864,7 @@ color: #fff;
     position: relative;
     z-index: 3;
 }
-.home_container_3_title {
-    background-image: url(/svg/BK02.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-.home_container_3_title embed {
-    width: 55%;
-    height: auto;
-    margin-left: 7%;
-margin-top: 3%;
-}
+
 
 
 
@@ -800,31 +901,14 @@ margin-top: 3%;
 .graph-bar:hover {
     opacity: 1;
 }
-.graph-bar span.inside {
-    text-align: left;
-    bottom: -8px;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.4rem;
-    left: -39%;
-    margin-bottom: 70px;
-    position: absolute;
-    width: 115px;
-    transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    /* FF3.5+ */
-    -o-transform: rotate(-90deg);
-    /* Opera 10.5 */
-    -webkit-transform: rotate(-90deg);
-    /* Saf3.1+, Chrome */
-} 
+
 .bar-1 {
     display: inline-block;
     height: 290px;
 }
 .bar-2 {
     display: inline-block;
-    height: 200px;
+    height: 129px;
 }
 .bar-3 {
     display: inline-block;
@@ -840,7 +924,7 @@ margin-top: 3%;
 }
 .bar-6 {
     display: inline-block;
-    height: 180px;
+    height: 120px;
 }
 .bar-7 {
     display: inline-block;
@@ -881,10 +965,7 @@ margin-top: 3%;
     /*    background-image: url(/image/hexiao.png);*/
     background-size: cover;
 }
-.contact_me embed {
-    width: 70%;
-/*    margin-top: 26%;*/
-}
+
 .map {
     width: 50%;
     height: 100%;

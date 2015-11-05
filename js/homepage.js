@@ -1,10 +1,17 @@
  $(function () {
 
-      $(document).pjax('a[data-pjax]','#container_var',{fragment:'#container_var',timeout:1000});
-     
-      $(document).on('pjax:start',   function() { $('#fade').show();});
+     $(document).pjax('a[data-pjax]', '#container_var', {
+         fragment: '#container_var',
+         timeout: 1000
+     });
 
-    $(document).on('pjax:end',   function() { $('#fade').fadeOut(2000);});
+     $(document).on('pjax:start', function () {
+         $('#fade').show();
+     });
+
+     $(document).on('pjax:end', function () {
+         $('#fade').fadeOut(2000);
+     });
 
      NProgress.start();
 
@@ -134,76 +141,86 @@
      var $header = $(".header");
      var $moveZ = $(".moveZone");
      var $musical = $(".menu_tool img");
-         var $back=$("#background");
+     var $back = $("#background");
 
      //当鼠标点击菜单
      var num = 0;
      var mum = 0;
-//解决音乐重复播放
-     
-//$("#logo a").click(function(){
-//    
-//$("#musical").remove();    
-//    
-//    
-//    
-//    
-//    
-//}) ;
-     
-     //make the "div" in the center
-  
-      $.fn.center=function(){
-        return this.each(function(){
-          var $this=$(this),
-            parent=$this.parent(),
-            topPos,
-            topMargin,
-            leftMargin,
-            resizeTimeout;
-          if(parent.is("body:not(.root-height-set)")){
-            $("html,body").css("height","100%").addClass("root-height-set");
-          }
-          if($this.css("position")==="absolute" || $this.css("position")==="fixed"){
-            topPos="50%";
-            topMargin="-"+Math.round($this.outerHeight()/2)+"px";
-            leftMargin="-"+Math.round($this.outerWidth()/2)+"px";
-            $this.css({"left":"50%","margin-left":leftMargin});
-          }else{
-            topPos=Math.floor((parent.height()-$this.outerHeight())/2);
-            topMargin="auto";
-            $this.css({"position":"relative","margin-left":"auto","margin-right":"auto"});
-          }
-          $this.css({"top":topPos,"margin-top":topMargin});
-          $(window).resize(function(){
-            if(resizeTimeout){
-              clearTimeout(resizeTimeout);
-            }
-            resizeTimeout=setTimeout(function(){
-              if($this.css("position")==="absolute"){
-                topMargin="-"+Math.round($this.outerHeight()/2)+"px";
-                leftMargin="-"+Math.round($this.outerWidth()/2)+"px";
-                $this.css({"margin-left":leftMargin,"margin-top":topMargin});
-              }else{
-                topPos=Math.floor((parent.height()-$this.outerHeight())/2);
-                $this.css("top",topPos);
-              }
-            },150);
-          });
-        });
-      };
-      $("#centerdiv").center();
+     //解决音乐重复播放
 
- 
-     
-     
-     
-     
-     
-     
-     
-     
-     
+     //$("#logo a").click(function(){
+     //    
+     //$("#musical").remove();    
+     //    
+     //    
+     //    
+     //    
+     //    
+     //}) ;
+
+     //make the "div" in the center
+
+     $.fn.center = function () {
+         return this.each(function () {
+             var $this = $(this),
+                 parent = $this.parent(),
+                 topPos,
+                 topMargin,
+                 leftMargin,
+                 resizeTimeout;
+             if (parent.is("body:not(.root-height-set)")) {
+                 $("html,body").css("height", "100%").addClass("root-height-set");
+             }
+             if ($this.css("position") === "absolute" || $this.css("position") === "fixed") {
+                 topPos = "50%";
+                 topMargin = "-" + Math.round($this.outerHeight() / 2) + "px";
+                 leftMargin = "-" + Math.round($this.outerWidth() / 2) + "px";
+                 $this.css({
+                     "left": "50%",
+                     "margin-left": leftMargin
+                 });
+             } else {
+                 topPos = Math.floor((parent.height() - $this.outerHeight()) / 2);
+                 topMargin = "auto";
+                 $this.css({
+                     "position": "relative",
+                     "margin-left": "auto",
+                     "margin-right": "auto"
+                 });
+             }
+             $this.css({
+                 "top": topPos,
+                 "margin-top": topMargin
+             });
+             $(window).resize(function () {
+                 if (resizeTimeout) {
+                     clearTimeout(resizeTimeout);
+                 }
+                 resizeTimeout = setTimeout(function () {
+                     if ($this.css("position") === "absolute") {
+                         topMargin = "-" + Math.round($this.outerHeight() / 2) + "px";
+                         leftMargin = "-" + Math.round($this.outerWidth() / 2) + "px";
+                         $this.css({
+                             "margin-left": leftMargin,
+                             "margin-top": topMargin
+                         });
+                     } else {
+                         topPos = Math.floor((parent.height() - $this.outerHeight()) / 2);
+                         $this.css("top", topPos);
+                     }
+                 }, 150);
+             });
+         });
+     };
+     $("#centerdiv").center();
+
+
+
+
+
+
+
+
 
      //stop musical
      $musical.click(function (e) {
@@ -243,14 +260,14 @@
              //             $moveZ.css({
              //                 left: "-=300px"
              //             });
-//             $menuUl.css({
-//                 "padding-left": "90px",
-//
-//
-//                 opacity: "1"
-//
-//
-//             });
+             //             $menuUl.css({
+             //                 "padding-left": "90px",
+             //
+             //
+             //                 opacity: "1"
+             //
+             //
+             //             });
 
 
 
@@ -268,14 +285,14 @@
              //                 left: "0"
              //             });
 
-//             $menuUl.css({
-//                 "padding-left": "0px",
-//
-//
-//                 opacity: "0"
-//
-//
-//             });
+             //             $menuUl.css({
+             //                 "padding-left": "0px",
+             //
+             //
+             //                 opacity: "0"
+             //
+             //
+             //             });
 
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
@@ -294,9 +311,9 @@
      $(window).scroll(function () {
 
          var toped = $(window).scrollTop();
-        
+
          if (toped > 0) {
-             
+
              $("#goTopBtn").css("display", "block");
          } else {
              $("#goTopBtn").css("display", "none");
@@ -477,51 +494,47 @@
 
 
      //moblie layout
-     var str="<embed id='mobile_port_title' src='/svg/mobile_title_portfolio.svg'>",
-         str2="<embed id='port_title' src='/svg/title_portfolio.svg'>";
-     
-     if($(window).width()<640){
-         $("#port_title").remove();
+     var str = "<embed  class='str'  id='mobile_port_title'  src='/svg/mobile_title_portfolio.svg'>",
+         str2 = "<embed class='str2' id='port_title' src='/svg/title_portfolio.svg'>",
+         str3 = "<embed class='str' id='mobile_about_title' src='/svg/mobile_title_about.svg'>",
+         str4 = "<embed class='str2' id='about_title' src='/svg/title_about.svg'>";
+
+     if ($(window).width() < 640) {
+         $("#port_title #about_title").remove();
          $(".home_container_2_title").html(str);
-        
+         $(".home_container_3_title").html(str3);
+
+     } else {
+         $('#mobile_port_title #mobile_about_title').remove();
+         $(".home_container_2_title").html(str2);
+         $(".home_container_3_title").html(str4);
+
+
+
      }
-       else{
-           $('#mobile_port_title').remove();
-           $(".home_container_2_title").html(str2);
-           
-           
-           
-       }  
-     
-//     $(window).bind('resize',function(){
-//         
-//         var win_width=$(window).width();
-//         
-//     
-//     if(win_width<640){
-//         $("#port_title").remove();
-//         $(".home_container_2_title").html(str);
-//        
-//     }
-//       else{
-//           $('#mobile_port_title').remove();
-//           $(".home_container_2_title").html(str2);
-//           
-//           
-//           
-//       }  
-//     });
-//     
-      
-     
-     
-     
-     
-     
-     
-     
-     
-     
+
+     $(window).bind('resize', function () {
+
+         var win_width = $(window).width();
+
+
+         if (win_width < 640 && (!$("#mobile_port_title").hasClass('str') || !("#mobile_about_title").hasClass("str"))) {
+             $("#port_title #about_title").remove();
+         $(".home_container_2_title").html(str);
+         $(".home_container_3_title").html(str3);
+         } else if (win_width > 641 && (!$("#port_title").hasClass('str2') || !("#about_title").hasClass("str2"))
+
+
+
+         ) { 
+     $('#mobile_port_title #mobile_about_title').remove();
+         $(".home_container_2_title").html(str2);
+         $(".home_container_3_title").html(str4);
+
+
+
+         }
+     });
 
 
 
@@ -529,13 +542,15 @@
 
 
 
-//     To solve the bug about the location of menu  when resizing  screen.
 
 
-//          $(window).bind('resize', function () {
-//              window.location.href = window.location.href;
-//          });
-//
+     //     To solve the bug about the location of menu  when resizing  screen.
+
+
+     //          $(window).bind('resize', function () {
+     //              window.location.href = window.location.href;
+     //          });
+     //
  });
  $(window).load(function () {
      NProgress.done();
