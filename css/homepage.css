@@ -43,7 +43,17 @@ body {
 
 }
 /*desktop layout*/
-@media only screen and (min-width:480px){
+
+
+@media only screen and (min-width:640px){
+    .grid {
+    padding: 0;
+    width: 80%;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto 0% auto;
+    height: auto;
+}
 .me{
     
     position: fixed;
@@ -62,7 +72,6 @@ body {
 
 
 .logo {
-    /*    font-family: "Fugaz One", sans-serif;*/
     font-family: 'Raleway', sans-serif;
     font-size: 65px;
     color: #242323;
@@ -76,7 +85,12 @@ body {
     z-index: 12;
 }
 
-
+.home_container_2_title embed {
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: auto;
+}
 
 
 
@@ -86,8 +100,26 @@ body {
 
 }
 
+@media only screen and (min-width: 1000px){
+    
+     .grid {
+    padding: 0;
+    width: 1000px;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto 0% auto;
+    height: auto;
+}
+    
+    
+}
+
+
+
+
+
 /*mobile layout*/
-@media only screen and (max-width: 479px){
+@media only screen and (max-width: 639px){
     
   .me{
     
@@ -100,7 +132,12 @@ body {
  
     
 }
-  
+  .home_container_2_title embed {
+    width: 99%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: auto;
+}    
     
 
     
@@ -118,8 +155,16 @@ body {
     z-index: 12;
 }  
     
-    
-    
+   
+  .grid {
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto 0% auto;
+    height: auto;
+}  
+     
     
     
 }
@@ -556,6 +601,14 @@ color: #fff;
     overflow-x: hidden;
     width: 100%;
 }
+#scene{
+    
+    margin: 0;
+    padding: 0;
+    
+    
+    
+}
 .container img {
     height: 100%;
 }
@@ -597,12 +650,7 @@ color: #fff;
     width: 100%;
     text-align: center;
 }
-.home_container_2_title embed {
-    width: 60%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: auto;
-}
+
 .home_container_2_text {
     height: auto;
     padding: 0;
@@ -613,14 +661,10 @@ color: #fff;
     min-width: 100%;
     height: 100%;
 }
-.grid {
-    padding: 0;
-    width: 80%;
-    list-style: none;
-    text-align: center;
-    margin: 0 auto 0% auto;
-    height: auto;
-}
+
+
+
+
 .grid li {
     padding: 0;
     margin-top: 0;

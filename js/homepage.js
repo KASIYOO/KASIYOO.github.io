@@ -476,8 +476,43 @@
      );
 
 
+     //moblie layout
+     var str="<embed id='mobile_port_title' src='/svg/mobile_title_portfolio.svg'>",
+         str2="<embed id='port_title' src='/svg/title_portfolio.svg'>";
      
+     if($(window).width()<640){
+         $("#port_title").remove();
+         $(".home_container_2_title").html(str);
+        
+     }
+       else{
+           $('#mobile_port_title').remove();
+           $(".home_container_2_title").html(str2);
+           
+           
+           
+       }  
      
+//     $(window).bind('resize',function(){
+//         
+//         var win_width=$(window).width();
+//         
+//     
+//     if(win_width<640){
+//         $("#port_title").remove();
+//         $(".home_container_2_title").html(str);
+//        
+//     }
+//       else{
+//           $('#mobile_port_title').remove();
+//           $(".home_container_2_title").html(str2);
+//           
+//           
+//           
+//       }  
+//     });
+//     
+      
      
      
      
