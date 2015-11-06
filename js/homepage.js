@@ -1,18 +1,6 @@
 jQuery(document).ready(function($){
 
 
-     $(document).pjax('a[data-pjax]', '#container_var', {
-         fragment: '#container_var',
-         timeout: 1000
-     });
-
-     $(document).on('pjax:start', function() {
-         $('#fade').show();
-     });
-
-     $(document).on('pjax:end', function() {
-         $('#fade').fadeOut(2000);
-     });
 
      NProgress.start();
 
@@ -117,12 +105,10 @@ jQuery(document).ready(function($){
      var $a_OO = $("#oo");
      var ico = $(".iconmenu");
      var $menu = $(".menu");
-     var $main = $("body");
      var $menuUl = $(".menu ul");
      var $header = $(".header");
      var $moveZ = $(".moveZone");
      var $musical = $(".menu_tool img");
-     var $back = $("#background");
     var $move=$(".me,html");
 
      //当鼠标点击菜单
@@ -242,28 +228,17 @@ jQuery(document).ready(function($){
      });
 
 
-     $(window).scroll(function() {
+   $(window).scroll(function() {
          var toped = $(window).scrollTop();
          if (toped > 0) {
              $("#goTopBtn").css("display", "block");
          } else {
              $("#goTopBtn").css("display", "none");
          }
-         var container_Y = toped * 0.4;
-
-
-
-
-         $back.css({
-             top: container_Y
-
-         });
-
-
+      
 
      });
-
-
+       
      $("#goTopBtn").click(function() {
          var toped = $(window).scrollTop();
          $('body,html').animate({
@@ -460,7 +435,24 @@ jQuery(document).ready(function($){
      //              window.location.href = window.location.href;
      //          });
      //
- });
+
+     $(document).pjax('a[data-pjax]', '#container_var', {
+         fragment: '#container_var',
+         timeout: 1000
+     });
+
+     $(document).on('pjax:start', function() {
+         $('#fade').show();
+     });
+
+     $(document).on('pjax:end',  
+function() {
+         $('#fade').fadeOut(2000);
+
+
+     });
+
+     });        
  $(window).load(function() {
      NProgress.done();
 

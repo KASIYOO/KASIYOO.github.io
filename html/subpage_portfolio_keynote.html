@@ -7,7 +7,8 @@
 
     <title>he</title>
     <script src="/js/jquery-1.11.3.min.js"></script>
-      <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300italic,300,700italic' rel='stylesheet' type='text/css'>    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300italic,300,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,800,900,700,300,100,200' rel='stylesheet' type='text/css'>
     <link href="/css/subpage.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/nprogress.css" type="text/css" />
@@ -20,7 +21,7 @@
     <div class="moveZone">
 
         <!--loading-->
-        
+
         <div class="header">
             <div class="logo">
                 <a id="logo" href="he.html"><span id="k">K</span><span id="a">A</span><span id="s">S</span><span id="i">I</span><span id="y">Y</span><span id="o">O</span><span id="oo">O</span>
@@ -67,12 +68,12 @@
             </div>
         </div>
         <div id="container_var" class="paper">
-<div id="background">
-        </div>
-        <div class="sub_container-1">
-            <div class="pro_background"></div>
-            <embed class="por_rep"  src="/svg/PORTFOLIO_PRESENTATION.svg">  
-        </div>
+            <div id="background">
+            </div>
+            <div class="sub_container-1">
+                <div class="pro_background"></div>
+                <embed class="por_rep" src="/svg/PORTFOLIO_PRESENTATION.svg">
+            </div>
 
 
 
@@ -110,11 +111,22 @@
                 <a class="pro" data-pjax href="subpage_portfolio_ai.html">PRE</a>
                 <a class="next" data-pjax href="subpage_portfolio_web.html">NEXT</a>
             </div>
-            
-            <footer><span class="claim">©2015 All rights reserved. <em>KASIYOO</em></span></footer>
-            
+
+            <footer> <span class="claim"><em>Created by KASIYOO</em></span>
+            </footer>
+            <script>  var $back = $("#background");
+          $(window).scroll(function() {
+         var toped = $(window).scrollTop();
+         var container_Y = toped * 0.4;
+         $back.css({
+             top: container_Y
+
+         });
+
+     });</script>
+
         </div>
-        
+
 
         <script type="text/javascript" src="/js/subpage.js"></script>
 
