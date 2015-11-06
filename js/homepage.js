@@ -218,8 +218,8 @@ jQuery(document).ready(function($){
 //                 left: "-=300px"
 //             });
 
-                          $moveZ.css({
-                              left: "-=300px"
+                          $main.css({
+                              right: "300px"
                           });
          } else {
              ico.children().css({
@@ -229,8 +229,8 @@ jQuery(document).ready(function($){
 //
 //                 "left": "100%"
 //             });
-                          $moveZ.css({
-                              left: "0"
+                          $main.css({
+                              right: "0"
                           });
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
