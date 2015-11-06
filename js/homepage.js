@@ -197,8 +197,11 @@ jQuery(document).ready(function($){
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
      });
-
-
+$(".menu a").click(function(){
+         setTimeout(function(){
+             ico.trigger('click');
+         },1500);
+});
    $(window).scroll(function() {
          var toped = $(window).scrollTop();
          if (toped > 0) {
@@ -400,10 +403,9 @@ jQuery(document).ready(function($){
      });
 
      $(document).on('pjax:end',  function() {
-         $('#fade').fadeOut(2000);
-         setTimeout(function(){
-             ico.trigger('click');
-         },1000);
+             $('#fade').fadeOut(2000);
+
+         
 
      });
 
