@@ -123,6 +123,7 @@ jQuery(document).ready(function($){
      var $moveZ = $(".moveZone");
      var $musical = $(".menu_tool img");
      var $back = $("#background");
+    var $move=$(".me,body");
 
      //当鼠标点击菜单
      var num = 0;
@@ -214,22 +215,26 @@ jQuery(document).ready(function($){
 
 
              });
+             $("#goTopBtn").css({"color":"#fff"});
 //             $menu.css({
 //                 left: "-=300px"
 //             });
 
-                          $main.css({
+                          $move.css({
                               right: "300px"
                           });
+             
          } else {
              ico.children().css({
                  "background-color": " #242323"
              });
+                          $("#goTopBtn").css({"color":"#242323"});
+
 //             $menu.css({
 //
 //                 "left": "100%"
 //             });
-                          $main.css({
+                          $move.css({
                               right: "0"
                           });
          }
