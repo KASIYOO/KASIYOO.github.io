@@ -78,27 +78,23 @@
 
 
             <p>
-                <video id="keynoteV" src="/video/alading.in.mp4" height="auto" width="75%" loop>
+                <video id="keynoteV" src="/video/alading.in.mp4" height="auto" width="75%" loop controls="controls">
                 </video>
                 <script>
                     var $video = $("#keynoteV");
                     var $p = $(".paper p");
                     var nun = 0;
-
                     $p.click(function() {
-
                         if (nun++ % 2 === 0) {
                             document.getElementById('keynoteV').play();
-
+                            document.getElementById('musical').pause();
+                            $musical.attr({"src": "/image/musical%20audio.gif" });
                         } else {
-
                             document.getElementById('keynoteV').pause();
-
+                            document.getElementById('musical').play();
+                            $musical.attr({"src": "/image/muscial-audio.gif"});
                         }
-
-
                     });
-
                 </script>
             </p>
             <!--

@@ -34,53 +34,33 @@ jQuery(document).ready(function($){
                  color: '#e1e1e5'
              }]
          }];
-
          var mapOptions = {
              zoom: 12,
              center: new google.maps.LatLng(38.274723, 140.867572),
-
              mapTypeControlOptions: {
                  mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
              },
              mapTypeId: MY_MAPTYPE_ID,
              disableDefaultUI: true
-
          };
-
          map = new google.maps.Map(document.getElementById('map-canvas'),
              mapOptions);
-
          var styledMapOptions = {
              name: 'Custom Style'
          };
-
          var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-
          map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-
-
          var image = '/svg2/location.svg';
-
          var marker = new google.maps.Marker({
              position: myLatLng,
-
              icon: image,
-
              map: map,
              title: '仙台市青葉区木町通二丁目６−５１'
          });
-
-
-
-
-
          marker.addListener('click', function() {
              map.setZoom(15);
              map.setCenter(marker.getPosition());
          });
-
-
-
          google.maps.event.addListener(map, 'center_changed', function() {
              // 3 seconds after the center of the map has changed, pan back to the
              // marker.
@@ -88,11 +68,7 @@ jQuery(document).ready(function($){
                  map.panTo(marker.getPosition());
              }, 1000);
          });
-
-
      }
-
-
      google.maps.event.addDomListener(window, 'load', initialize);
 
      //iconmenu animate
@@ -189,17 +165,12 @@ jQuery(document).ready(function($){
          }
 
      });
+    
 //animation for menu
      ico.click(function(e) {
-
          if (num++ % 2 === 0) {
-
-
-
              ico.children().css({
                  "background-color": "#fff"
-
-
              });
              $("#goTopBtn").css({"color":"#fff"});
 //             $menu.css({
@@ -235,8 +206,6 @@ jQuery(document).ready(function($){
          } else {
              $("#goTopBtn").css("display", "none");
          }
-      
-
      });
        
      $("#goTopBtn").click(function() {
@@ -258,11 +227,6 @@ jQuery(document).ready(function($){
                  "-o-transition": "all 0.2s  linear 0.05s",
                  "-webkit-transition": "all 0.2s  linear 0.05s",
                  "-ms-transition": "all 0.2s  linear 0.05s"
-
-
-
-
-
 
              });
              $a_S.css({
@@ -315,7 +279,6 @@ jQuery(document).ready(function($){
                  "-ms-transition": 'all 0.2s  linear 0.3s',
              });
 
-
          }
 
      );
@@ -330,9 +293,6 @@ jQuery(document).ready(function($){
                  "-o-transition": 'all 0.2s  linear 0.3s',
                  "-webkit-transition": 'all 0.2s  linear 0.3s',
                  "-ms-transition": 'all 0.2s  linear 0.3s',
-
-
-
              });
              $a_S.css({
                  left: '-20px',
@@ -352,9 +312,7 @@ jQuery(document).ready(function($){
                  "-webkit-transition": 'all 0.2s  linear 0.2s',
                  "-ms-transition": 'all 0.2s  linear 0.2s',
              });
-
              $a_Y.css({
-
                  left: '-20px',
                  opacity: '0',
                  transition: 'all 0.2s  linear 0.15s',
@@ -362,8 +320,6 @@ jQuery(document).ready(function($){
                  "-o-transition": 'all 0.2s  linear 0.15s',
                  "-webkit-transition": 'all 0.2s  linear 0.15s',
                  "-ms-transition": 'all 0.2s  linear 0.15s',
-
-
              });
              $a_O.css({
                  left: '-20px',
@@ -383,8 +339,6 @@ jQuery(document).ready(function($){
                  "-webkit-transition": "all 0.2s  linear 0.05s",
                  "-ms-transition": "all 0.2s  linear 0.05s"
              });
-
-
          }
 
      );
@@ -445,10 +399,11 @@ jQuery(document).ready(function($){
          $('#fade').show();
      });
 
-     $(document).on('pjax:end',  
-function() {
+     $(document).on('pjax:end',  function() {
          $('#fade').fadeOut(2000);
-
+         setTimeout(function(){
+             ico.trigger('click');
+         },1000);
 
      });
 
