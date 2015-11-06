@@ -9,6 +9,9 @@ html {
 }
 html {
     font-size: 62.5%;
+     transition: right 0.3s linear;
+    -webkit-transition: right 0.3s linear;
+    right: 0;
 }
 body {
     overflow-x: hidden;

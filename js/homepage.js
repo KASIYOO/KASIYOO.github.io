@@ -123,7 +123,7 @@ jQuery(document).ready(function($){
      var $moveZ = $(".moveZone");
      var $musical = $(".menu_tool img");
      var $back = $("#background");
-    var $move=$(".me,body");
+    var $move=$(".me,html");
 
      //当鼠标点击菜单
      var num = 0;
