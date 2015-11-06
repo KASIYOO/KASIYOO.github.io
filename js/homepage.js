@@ -1,15 +1,16 @@
- $(function () {
+jQuery(document).ready(function($){
+
 
      $(document).pjax('a[data-pjax]', '#container_var', {
          fragment: '#container_var',
          timeout: 1000
      });
 
-     $(document).on('pjax:start', function () {
+     $(document).on('pjax:start', function() {
          $('#fade').show();
      });
 
-     $(document).on('pjax:end', function () {
+     $(document).on('pjax:end', function() {
          $('#fade').fadeOut(2000);
      });
 
@@ -24,44 +25,27 @@
 
      function initialize() {
 
-
-
-
-
-         var featureOpts = [
-             {
-                 stylers: [
-                     {
-                         hue: '#292b2f'
-                     },
-                     {
-                         visibility: 'simplified'
-                     },
-                     {
-                         gamma: 0.5
-                     },
-                     {
-                         weight: 0.5
-                     }
-      ]
-    },
-             {
-                 elementType: 'labels',
-                 stylers: [
-                     {
-                         visibility: 'off'
-                     }
-      ]
-    },
-             {
-                 featureType: 'water',
-                 stylers: [
-                     {
-                         color: '#e1e1e5'
-                     }
-      ]
-    }
-  ];
+         var featureOpts = [{
+             stylers: [{
+                 hue: '#292b2f'
+             }, {
+                 visibility: 'simplified'
+             }, {
+                 gamma: 0.5
+             }, {
+                 weight: 0.5
+             }]
+         }, {
+             elementType: 'labels',
+             stylers: [{
+                 visibility: 'off'
+             }]
+         }, {
+             featureType: 'water',
+             stylers: [{
+                 color: '#e1e1e5'
+             }]
+         }];
 
          var mapOptions = {
              zoom: 12,
@@ -87,8 +71,6 @@
          map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 
 
-
-
          var image = '/svg2/location.svg';
 
          var marker = new google.maps.Marker({
@@ -104,17 +86,17 @@
 
 
 
-         marker.addListener('click', function () {
+         marker.addListener('click', function() {
              map.setZoom(15);
              map.setCenter(marker.getPosition());
          });
 
 
 
-         google.maps.event.addListener(map, 'center_changed', function () {
+         google.maps.event.addListener(map, 'center_changed', function() {
              // 3 seconds after the center of the map has changed, pan back to the
              // marker.
-             window.setTimeout(function () {
+             window.setTimeout(function() {
                  map.panTo(marker.getPosition());
              }, 1000);
          });
@@ -124,7 +106,6 @@
 
 
      google.maps.event.addDomListener(window, 'load', initialize);
-
 
      //iconmenu animate
      var $logo_a = $("#logo");
@@ -146,22 +127,11 @@
      //当鼠标点击菜单
      var num = 0;
      var mum = 0;
-     //解决音乐重复播放
-
-     //$("#logo a").click(function(){
-     //    
-     //$("#musical").remove();    
-     //    
-     //    
-     //    
-     //    
-     //    
-     //}) ;
 
      //make the "div" in the center
 
-     $.fn.center = function () {
-         return this.each(function () {
+     $.fn.center = function() {
+         return this.each(function() {
              var $this = $(this),
                  parent = $this.parent(),
                  topPos,
@@ -192,11 +162,11 @@
                  "top": topPos,
                  "margin-top": topMargin
              });
-             $(window).resize(function () {
+             $(window).resize(function() {
                  if (resizeTimeout) {
                      clearTimeout(resizeTimeout);
                  }
-                 resizeTimeout = setTimeout(function () {
+                 resizeTimeout = setTimeout(function() {
                      if ($this.css("position") === "absolute") {
                          topMargin = "-" + Math.round($this.outerHeight() / 2) + "px";
                          leftMargin = "-" + Math.round($this.outerWidth() / 2) + "px";
@@ -214,16 +184,8 @@
      };
      $("#centerdiv").center();
 
-
-
-
-
-
-
-
-
      //stop musical
-     $musical.click(function (e) {
+     $musical.click(function(e) {
          if (mum++ % 2 === 0) {
              document.getElementById('musical').pause();
 
@@ -239,10 +201,9 @@
              });
          }
 
-
      });
-
-     ico.click(function (e) {
+//animation for menu
+     ico.click(function(e) {
 
          if (num++ % 2 === 0) {
 
@@ -253,75 +214,39 @@
 
 
              });
-             $menu.css({
-                 left: "-=300px"
-             });
+//             $menu.css({
+//                 left: "-=300px"
+//             });
 
-             //             $moveZ.css({
-             //                 left: "-=300px"
-             //             });
-             //             $menuUl.css({
-             //                 "padding-left": "90px",
-             //
-             //
-             //                 opacity: "1"
-             //
-             //
-             //             });
-
-
-
+                          $moveZ.css({
+                              left: "-=300px"
+                          });
          } else {
              ico.children().css({
                  "background-color": " #242323"
-
-
              });
-             $menu.css({
-
-                 "left": "100%"
-             });
-             //             $moveZ.css({
-             //                 left: "0"
-             //             });
-
-             //             $menuUl.css({
-             //                 "padding-left": "0px",
-             //
-             //
-             //                 opacity: "0"
-             //
-             //
-             //             });
-
+//             $menu.css({
+//
+//                 "left": "100%"
+//             });
+                          $moveZ.css({
+                              left: "0"
+                          });
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
-
-
      });
 
 
-
-
-
-
-
-
-
-     $(window).scroll(function () {
-
+     $(window).scroll(function() {
          var toped = $(window).scrollTop();
-
          if (toped > 0) {
-
              $("#goTopBtn").css("display", "block");
          } else {
              $("#goTopBtn").css("display", "none");
          }
-
-
-
          var container_Y = toped * 0.4;
+
+
 
 
          $back.css({
@@ -334,24 +259,16 @@
      });
 
 
-     $("#goTopBtn").click(function () {
+     $("#goTopBtn").click(function() {
          var toped = $(window).scrollTop();
          $('body,html').animate({
              scrollTop: 0
          }, 500);
      });
 
-
-
-
-
-
-
-
-
      //logo change
      $logo_a.mouseenter(
-         function () {
+         function() {
 
              $a_A.css({
                  left: '0px',
@@ -424,7 +341,7 @@
      );
 
      $logo_a.mouseleave(
-         function () {
+         function() {
              $a_A.css({
                  left: '-20px',
                  opacity: '0',
@@ -509,39 +426,26 @@
          $(".home_container_2_title").html(str2);
          $(".home_container_3_title").html(str4);
 
-
-
      }
 
-     $(window).bind('resize', function () {
+     $(window).bind('resize', function() {
 
          var win_width = $(window).width();
-
-
          if (win_width < 640 && (!$("#mobile_port_title").hasClass('str') || !("#mobile_about_title").hasClass("str"))) {
              $("#port_title #about_title").remove();
-         $(".home_container_2_title").html(str);
-         $(".home_container_3_title").html(str3);
+             $(".home_container_2_title").html(str);
+             $(".home_container_3_title").html(str3);
          } else if (win_width > 641 && (!$("#port_title").hasClass('str2') || !("#about_title").hasClass("str2"))
 
-
-
-         ) { 
-     $('#mobile_port_title #mobile_about_title').remove();
-         $(".home_container_2_title").html(str2);
-         $(".home_container_3_title").html(str4);
+         ) {
+             $('#mobile_port_title #mobile_about_title').remove();
+             $(".home_container_2_title").html(str2);
+             $(".home_container_3_title").html(str4);
 
 
 
          }
      });
-
-
-
-
-
-
-
 
 
      //     To solve the bug about the location of menu  when resizing  screen.
@@ -552,10 +456,7 @@
      //          });
      //
  });
- $(window).load(function () {
+ $(window).load(function() {
      NProgress.done();
-
-
-
 
  });
