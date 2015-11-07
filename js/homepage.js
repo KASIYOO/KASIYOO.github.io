@@ -169,6 +169,7 @@ jQuery(document).ready(function($){
 //animation for menu
      ico.click(function(e) {
          if (num++ % 2 === 0) {
+             $menu.addClass("ox");
              ico.children().css({
                  "background-color": "#fff"
              });
@@ -182,6 +183,7 @@ jQuery(document).ready(function($){
                           });
              
          } else {
+             $menu.removeClass("ox");
              ico.children().css({
                  "background-color": " #242323"
              });
@@ -197,11 +199,19 @@ jQuery(document).ready(function($){
          }
          e.preventDefault(); //阻止元素的默认动作（如果存在） 
      });
-$(".menu a").click(function(){
-         setTimeout(function(){
-             ico.trigger('click');
-         },1500);
-});
+    $(".paper").click(function(){
+        if($menu.hasClass("ox")){
+            ico.trigger('click');
+        }
+        
+        
+        
+    });
+//$(".menu a").click(function(){
+//         setTimeout(function(){
+//             ico.trigger('click');
+//         },1500);
+//});
    $(window).scroll(function() {
          var toped = $(window).scrollTop();
          if (toped > 0) {
