@@ -76,7 +76,7 @@ body {
         height: 100%;
         background-image: url(/image/MY.png);
         background-size: 70%;
-        background-position: 150% 50%;
+        background-position: 130% 30%;
         background-repeat: no-repeat;
 /*        background-color: #5683e5;*/
         overflow-x: hidden;
@@ -111,8 +111,10 @@ body {
     .home_container_3_title embed {
         width: 55%;
         height: auto;
-        margin-left: 7%;
+        margin-left: 4%;
         margin-top: 3%;
+                margin-bottom: 2%;
+
     }
     .contact_me embed {
         width: 70%;
@@ -884,6 +886,7 @@ a {
     display: table-cell;
     margin: 0;
     width: 6.2%;
+    max-width: 80px;
     position: relative;
     opacity: 0.9;
     transition: all 0.25s ease 0s;

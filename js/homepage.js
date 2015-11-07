@@ -396,7 +396,7 @@ $(".menu a").click(function(){
 
      $(document).pjax('a[data-pjax]', '#container_var', {
          fragment: '#container_var',
-         timeout: 1000
+         timeout: 5000
      });
 
      $(document).on('pjax:start', function() {
