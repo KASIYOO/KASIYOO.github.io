@@ -85,7 +85,7 @@ jQuery(document).ready(function($){
      var $header = $(".header");
      var $moveZ = $(".moveZone");
      var $musical = $(".menu_tool img");
-    var $move=$(".me,html");
+    var $move=$(".me,html,#container");
 
      //当鼠标点击菜单
      var num = 0;
@@ -366,6 +366,7 @@ $(".menu a").click(function(){
      }
 
      $(window).bind('resize', function() {
+         
 
          var win_width = $(window).width();
          if (win_width < 640 && (!$("#mobile_port_title").hasClass('str') || !("#mobile_about_title").hasClass("str"))) {
