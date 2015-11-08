@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/nprogress.css" type="text/css" />
 
 </head>
+
 <body>
     <div class="update" id="update">
         <div class="warning" id="warning">
@@ -25,64 +26,62 @@
     </div>
     <div id="mask"></div>
 
-        <div id="fade"></div>
-        <div class="header">
-            <div class="logo">
-                <a id="logo" href="/index.html#home_container-1"><span id="k">K</span><span id="a">A</span><span id="s">S</span><span id="i">I</span><span id="y">Y</span><span id="o">O</span><span id="oo">O</span>
+    <div id="fade"></div>
+    <div class="header">
+        <div class="logo">
+            <a id="logo" href="/index.html#home_container-1"><span id="k">K</span><span id="a">A</span><span id="s">S</span><span id="i">I</span><span id="y">Y</span><span id="o">O</span><span id="oo">O</span>
         </a>
-            </div>
         </div>
-        <div class="border">
-            <div class="iconmenu">
-                <span id="top"></span>
-                <div class="line"></div>
-                <span id="bottom"></span>
+    </div>
+    <div class="border">
+        <div class="iconmenu">
+            <span id="top"></span>
+            <div class="line"></div>
+            <span id="bottom"></span>
 
-            </div>
         </div>
-        <div class="menu">
+    </div>
+    <div class="menu">
 
-            <ul>
-                <li id="home"><a href="/index.html#home_container-1">HOME</a></li>
-                <li><a href="/index.html#home_container_3">ABOUT ME</a></li>
-                <li><a href="/index.html#home_container_2">POTOFOLIO</a></li>
-                <li><a class="contact" href="/index.html#home_container_4">CONTACT</a></li>
-            </ul>
-            <ul>
-                <li><a href="/html/subpage_portfolio_vi.html" data-pjax>VISUAL IDENTITY </a></li>
-                <li><a href="/html/subpage_portfolio_ai.html" data-pjax>ILLUSTRATION</a></li>
-                <li><a href="/html/subpage_portfolio_keynote.html" data-pjax>PRESENTATION</a></li>
-                <li><a href="/html/subpage_portfolio_web.html" data-pjax>WEB DESIGN</a></li>
-                <li><a href="/html/subpage_portfolio_ui.html" data-pjax>UI DESIGN</a></li>
-                <li><a href="/html/subpage_portfolio_poster.html" data-pjax>POSTER DESIGN</a></li>
-            </ul>
-            <div class="menu_tool">
-                <span class="contact">
+        <ul>
+            <li id="home"><a href="/index.html#home_container-1">HOME</a></li>
+            <li><a href="/index.html#home_container_3">ABOUT ME</a></li>
+            <li><a href="/index.html#home_container_2">POTOFOLIO</a></li>
+            <li><a class="contact" href="/index.html#home_container_4">CONTACT</a></li>
+        </ul>
+        <ul>
+            <li><a href="/html/subpage_portfolio_vi.html" data-pjax>VISUAL IDENTITY </a></li>
+            <li><a href="/html/subpage_portfolio_ai.html" data-pjax>ILLUSTRATION</a></li>
+            <li><a href="/html/subpage_portfolio_keynote.html" data-pjax>PRESENTATION</a></li>
+            <li><a href="/html/subpage_portfolio_web.html" data-pjax>WEB DESIGN</a></li>
+            <li><a href="/html/subpage_portfolio_ui.html" data-pjax>UI DESIGN</a></li>
+            <li><a href="/html/subpage_portfolio_poster.html" data-pjax>POSTER DESIGN</a></li>
+        </ul>
+        <div class="menu_tool">
+            <span class="contact">
         <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-facebook2"></span></a>
-                <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-twitter2"></span></a>
-                <a href="mailto:624722486@qq.com"><span class="icon-mail"></span></a></span>
-                <img src="/image/muscial-audio.gif">
-            </div>
+            <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-twitter2"></span></a>
+            <a href="mailto:624722486@qq.com"><span class="icon-mail"></span></a></span>
+            <img src="/image/muscial-audio.gif">
         </div>
-            <div class="moveZone">
+    </div>
+    <div class="moveZone">
 
         <div id="container_var" class="paper">
-            <div class="me cube" ></div>
+            <div class="container cube" id="container">
+                        <div id="anitOut" class="anitOut">
+                        </div>
+            </div>
+            <div class="me cube"></div>
             <div class="home_container-1" id="home_container-1">
                 <div class="frontlayer"></div>
-                <div class="container cube" id="container">
-                    <ul id="scene" class="scene">
-                        <li class="layer" data-depth="1.00" >
-                            <div id="anitOut" class="anitOut"  >
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+
+            </div>
+           <div class="home_container_2_title">
+                <embed id="port_title" src="/svg/title_portfolio.svg">
             </div>
             <div class="home_container_2 " id="home_container_2">
-                <div class="home_container_2_title">
-                    <embed id="port_title" src="/svg/title_portfolio.svg">
-                </div>
+ 
                 <div class="home_container_2_text">
                     <ul class="grid cs-style-3">
                         <li>
@@ -117,7 +116,7 @@
                                 </figcaption>
                             </figure>
                         </li>
-                         <li>
+                        <li>
                             <figure>
                                 <img src="image/ai_image.jpg" alt="imageai">
                                 <figcaption>
@@ -168,21 +167,22 @@
         <audio id="musical" src="video/Maneater%E5%89%AF%E6%9C%AC.mp3" loop></audio>
 
     </div>
-<!--        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <!--        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
 
     <script src="js/jquery-1.11.3.min.js"></script>
-    
+
     <script src="js/jquery.color.min.js"></script>
     <script src="js/jquery.pjax.min.js"></script>
     <script src="js/nprogress.js"></script>
-<!--    <script type="text/javascript" src="js/paralla.js"></script>-->
+    <!--    <script type="text/javascript" src="js/paralla.js"></script>-->
     <script type="text/javascript" src="js/cav.min.js"></script>
     <script type="text/javascript" src="js/get.js"></script>
-        <script type="text/javascript" src="js/homepage.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
 
     <script>
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
+
     </script>
 
 </body>

@@ -16,7 +16,7 @@
                         xyScalar: 1,
                         zOffset: 100,
                         ambient: "#055993",
-                        diffuse: "#00a2fa",
+                        diffuse: "#0878b5",
                         speed: 0.001,
                         gravity: 1200,
                         dampening: 0.95,

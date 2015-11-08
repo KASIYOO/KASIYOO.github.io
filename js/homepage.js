@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
      function initialize() {
          var featureOpts = [{
              stylers: [{
-                 hue: '#292b2f'
+                 hue: '#c0d4ff'
              }, {
                  visibility: 'simplified'
              }, {
@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
          }, {
              featureType: 'water',
              stylers: [{
-                 color: '#e1e1e5'
+                 color: '#5683e5'
              }]
          }];
          var mapOptions = {

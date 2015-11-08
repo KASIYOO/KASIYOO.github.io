@@ -18,25 +18,24 @@ body {
     font-size: 1.4rem;
     right: 0;
     background-color: #242323;
-     transition: right 0.3s linear;
+    transition: right 0.3s linear;
     -webkit-transition: right 0.3s linear;
 }
 .cube {
-   -webkit-transform: translateZ(0);
-   -moz-transform: translateZ(0);
-   -ms-transform: translateZ(0);
-   -o-transform: translateZ(0);
-   transform: translateZ(0);
-    -webkit-backface-visibility: hidden; 
-   -moz-backface-visibility: hidden; 
-   -ms-backface-visibility: hidden; 
-   backface-visibility: hidden; 
-  
-   -webkit-perspective: 1000; 
-   -moz-perspective: 1000; 
-   -ms-perspective: 1000; 
-   perspective: 1000; 
-   /* Other transform properties here */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    /* Other transform properties here */
 }
 .moveZone {
     height: 100%;
@@ -71,17 +70,17 @@ body {
     }
     .me {
         position: fixed;
-        z-index: -2;
+        z-index: -3;
         width: 100%;
         height: 100%;
         background-image: url(/image/MY.png);
         background-size: 70%;
-        background-position: 130% 30%;
+        background-position: 150% 30%;
         background-repeat: no-repeat;
-/*        background-color: #5683e5;*/
+        /*        background-color: #5683e5;*/
         overflow-x: hidden;
-         transition: right 0.3s ease-out;
-    -webkit-transition: right 0.3s ease-out;
+        transition: right 0.3s ease-out;
+        -webkit-transition: right 0.3s ease-out;
         right: 0;
     }
     .logo {
@@ -107,14 +106,15 @@ body {
         background-image: url(/svg/BK02.svg);
         background-size: cover;
         background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
     }
     .home_container_3_title embed {
         width: 55%;
         height: auto;
         margin-left: 4%;
         margin-top: 3%;
-                margin-bottom: 2%;
-
+        margin-bottom: 2%;
     }
     .contact_me embed {
         width: 70%;
@@ -190,7 +190,6 @@ body {
         height: 100%;
         overflow-x: hidden;
         right: 0;
-        
     }
     .contact_me embed {
         width: 100%;
@@ -532,12 +531,11 @@ a {
     background: #242323;
     position: fixed;
     top: 0;
-    min-height:100%;
+    min-height: 100%;
     height: 700px;
     right: 0;
     width: 300px;
     z-index: -4;
-
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -677,6 +675,7 @@ a {
     background-position: center;
     background-image: url(/svg/title_w.svg);
     background-color: #000;
+     
 }
 .home_container_1_wrap {
     width: 150%;
@@ -693,13 +692,13 @@ a {
 }
 .container {
     position: fixed;
-    height:100%;
+    height: 100%;
     text-align: center;
     overflow-y: hidden;
     overflow-x: hidden;
     width: 100%;
-    z-index: -5;
-      transition: right 0.3s ease-out;
+    z-index: -3;
+    transition: right 0.3s ease-out;
     -webkit-transition: right 0.3s ease-out;
     right: 0;
 }
@@ -707,11 +706,10 @@ a {
     margin: 0;
     padding: 0;
 }
-.layer{
-    width:100%;
+.layer {
+    width: 100%;
     height: 100%;
     display: inline-block;
-
 }
 .container img {
     height: 100%;
@@ -749,9 +747,13 @@ a {
     background-color: #fff;
 }
 .home_container_2_title {
-    background-color: #ffffff;
+    background-color: #fff;
     width: 100%;
+    height: auto;
     text-align: center;
+    mix-blend-mode: screen;
+    -webkit-mix-blend-mode: screen;
+    -moz-mix-blend-mode: screen;
 }
 .home_container_2_text {
     height: auto;
@@ -793,25 +795,19 @@ a {
     padding: 0px;
     height: 75px;
     transition: background 0.1s;
+ 
 }
 .grid h2 {
-    
-     
     font-size: 13px;
-
-        letter-spacing: 6px;
-       
-
+    letter-spacing: 6px;
     line-height: 75px;
     display: inline;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     transition: all 0.35s ease-out 0.25s;
-      -o-transition: all 0.35s ease-out 0.25s;
+    -o-transition: all 0.35s ease-out 0.25s;
     -moz-transition: all 0.35s ease-out 0.25s;
     -webkit-transition: all 0.35s ease-out 0.25s;
-
-
 }
 .cs-style-3 figure {
     overflow: hidden;
@@ -844,7 +840,6 @@ a {
     transition: transform 0.35s, opacity 0.1s 0.3s;
 }
 .grid figure:hover figcaption {
-
     /*    opacity: 1;*/
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
@@ -854,9 +849,8 @@ a {
     -moz-transition: -moz-transform 0.35s, opacity 0.1s;
     transition: transform 0.35s, opacity 0.1s;
 }
-.grid figure:hover h2{
-   
-         letter-spacing: 5px;
+.grid figure:hover h2 {
+    letter-spacing: 5px;
     font-size: 10px;
 }
 .cs-style-3 figcaption a {
@@ -867,7 +861,7 @@ a {
     width: 100%;
     height: auto;
     position: relative;
-    z-index: 3;
+    z-index: 0;
 }
 .skills {
     margin: 0;
@@ -882,7 +876,7 @@ a {
     overflow-x: hidden;
 }
 .graph-bar {
-    background-color: #5683e5;
+    background-color:#3d78f7;
     display: table-cell;
     margin: 0;
     width: 6.2%;
@@ -1020,7 +1014,6 @@ footer span {
 #background {
     position: absolute;
     z-index: -1;
-
     width: 100%;
     height: 100%;
     background-image: url(/image/skill.jpg);
