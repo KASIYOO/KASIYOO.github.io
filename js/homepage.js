@@ -1,67 +1,7 @@
 jQuery(document).ready(function($){
 
      NProgress.start();
-     var map;
-     var myLatLng = new google.maps.LatLng(38.274723, 140.867572);
-     var MY_MAPTYPE_ID = 'custom_style';
-     function initialize() {
-         var featureOpts = [{
-             stylers: [{
-                 hue: '#c0d4ff'
-             }, {
-                 visibility: 'simplified'
-             }, {
-                 gamma: 0.5
-             }, {
-                 weight: 0.5
-             }]
-         }, {
-             elementType: 'labels',
-             stylers: [{
-                 visibility: 'off'
-             }]
-         }, {
-             featureType: 'water',
-             stylers: [{
-                 color: '#5683e5'
-             }]
-         }];
-         var mapOptions = {
-             zoom: 12,
-             center: new google.maps.LatLng(38.274723, 140.867572),
-             mapTypeControlOptions: {
-                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-             },
-             mapTypeId: MY_MAPTYPE_ID,
-             disableDefaultUI: true
-         };
-         map = new google.maps.Map(document.getElementById('map-canvas'),
-             mapOptions);
-         var styledMapOptions = {
-             name: 'Custom Style'
-         };
-         var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-         map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-         var image = '/svg2/location.svg';
-         var marker = new google.maps.Marker({
-             position: myLatLng,
-             icon: image,
-             map: map,
-             title: '仙台市青葉区木町通二丁目６−５１'
-         });
-         marker.addListener('click', function() {
-             map.setZoom(15);
-             map.setCenter(marker.getPosition());
-         });
-         google.maps.event.addListener(map, 'center_changed', function() {
-             // 3 seconds after the center of the map has changed, pan back to the
-             // marker.
-             window.setTimeout(function() {
-                 map.panTo(marker.getPosition());
-             }, 1000);
-         });
-     }
-     google.maps.event.addDomListener(window, 'load', initialize);
+    
      //iconmenu animate
      var $logo_a = $("#logo");
      var $a_A = $("#a");
@@ -368,6 +308,67 @@ jQuery(document).ready(function($){
      $(document).on('pjax:end',  function() {
              $('#fade').fadeOut(2500);
      });
+     var map;
+     var myLatLng = new google.maps.LatLng(38.274723, 140.867572);
+     var MY_MAPTYPE_ID = 'custom_style';
+     function initialize() {
+         var featureOpts = [{
+             stylers: [{
+                 hue: '#c0d4ff'
+             }, {
+                 visibility: 'simplified'
+             }, {
+                 gamma: 0.5
+             }, {
+                 weight: 0.5
+             }]
+         }, {
+             elementType: 'labels',
+             stylers: [{
+                 visibility: 'off'
+             }]
+         }, {
+             featureType: 'water',
+             stylers: [{
+                 color: '#5683e5'
+             }]
+         }];
+         var mapOptions = {
+             zoom: 12,
+             center: new google.maps.LatLng(38.274723, 140.867572),
+             mapTypeControlOptions: {
+                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+             },
+             mapTypeId: MY_MAPTYPE_ID,
+             disableDefaultUI: true
+         };
+         map = new google.maps.Map(document.getElementById('map-canvas'),
+             mapOptions);
+         var styledMapOptions = {
+             name: 'Custom Style'
+         };
+         var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+         map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+         var image = '/svg2/location.svg';
+         var marker = new google.maps.Marker({
+             position: myLatLng,
+             icon: image,
+             map: map,
+             title: '仙台市青葉区木町通二丁目６−５１'
+         });
+         marker.addListener('click', function() {
+             map.setZoom(15);
+             map.setCenter(marker.getPosition());
+         });
+         google.maps.event.addListener(map, 'center_changed', function() {
+             // 3 seconds after the center of the map has changed, pan back to the
+             // marker.
+             window.setTimeout(function() {
+                 map.panTo(marker.getPosition());
+             }, 1000);
+         });
+     }
+     google.maps.event.addDomListener(window, 'load', initialize);
      });        
  $(window).load(function() {
      NProgress.done();
