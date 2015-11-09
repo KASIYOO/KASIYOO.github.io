@@ -19,7 +19,25 @@ jQuery(document).ready(function($){
     var $move=$(".me,html,#container");
      //当鼠标点击菜单
      var num = 0;
-     var mum = 0;
+    var mum = 0;
+   
+    function keepPositioin(){ 
+    var he_width=$(document).width();
+    var l_r_width=(he_width-1000)/2;
+    var container_2_height=$("#home_container_2").height();
+    $(".keepPosition").css({"width":l_r_width+'px',"height":container_2_height+'px'});
+
+   }
+    keepPositioin();
+//    
+//   function bgstyleChange(){
+//   var styleChange_left= $("#home_container_2").offset().left;
+//    var styleChange_top=$("#home_container_2").offset().top;
+//    var styleChange=$("#styleChange");
+//    
+//    styleChange.css({"left":styleChange_left,"top":styleChange_top});}
+//    bgstyleChange();
+    
      //make the "div" in the center
      $.fn.center = function() {
          return this.each(function() {
@@ -130,6 +148,8 @@ jQuery(document).ready(function($){
 //});
    $(window).scroll(function() {
          var toped = $(window).scrollTop();
+//           bgstyleChange();
+
          if (toped > 0) {
              $("#goTopBtn").css("display", "block");
          } else {
@@ -285,7 +305,7 @@ jQuery(document).ready(function($){
          $(".home_container_3_title").html(str4);
      }
      $(window).bind('resize', function() {
-         
+             keepPositioin();
          var win_width = $(window).width();
          if (win_width < 640 && (!$("#mobile_port_title").hasClass('str') || !("#mobile_about_title").hasClass("str"))) {
              $("#port_title #about_title").remove();
@@ -314,7 +334,7 @@ jQuery(document).ready(function($){
      function initialize() {
          var featureOpts = [{
              stylers: [{
-                 hue: '#c0d4ff'
+                 hue: '#24a2fd'
              }, {
                  visibility: 'simplified'
              }, {
@@ -330,11 +350,11 @@ jQuery(document).ready(function($){
          }, {
              featureType: 'water',
              stylers: [{
-                 color: '#5683e5'
+                 color: '#4d97e3'
              }]
          }];
          var mapOptions = {
-             zoom: 12,
+             zoom: 10,
              center: new google.maps.LatLng(38.274723, 140.867572),
              mapTypeControlOptions: {
                  mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
