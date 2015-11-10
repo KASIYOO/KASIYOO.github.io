@@ -1,7 +1,8 @@
-s/* 代码整理：懒人之家 www.lanrenzhijia.com */
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
 /* Make clicks pass-through */
 #nprogress {
 	pointer-events: none;
+
 }
 #nprogress .bar {
 	background: #262626;
@@ -27,6 +28,7 @@ s/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	transform: rotate(3deg) translate(0px, -4px);
 }
 /* Remove these to get rid of the spinner */
+/*
 #nprogress .spinner {
 	display: block;
 	position: fixed;
@@ -34,7 +36,9 @@ s/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	top: 15px;
 	right: 15px;
 }
+*/
 /* 代码整理：懒人之家 www.lanrenzhijia.com */
+/*
 #nprogress .spinner-icon {
 	width: 18px;
 	height: 18px;
@@ -62,4 +66,5 @@ transform: rotate(0deg);
 transform: rotate(360deg);
 }
 }
+*/
 /* 代码整理：懒人之家 www.lanrenzhijia.com */

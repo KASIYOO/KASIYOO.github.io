@@ -199,14 +199,19 @@
   /**
    * Removes the element. Opposite of render().
    */
-
-  NProgress.remove = function() {
-
-                                $("#mask").fadeOut(300);
+    function dispear(){
+        
+         $("#mask").fadeOut(900);
            document.getElementById('musical').play();
       $(".frontlayer").animate({"background-color": 'transparent'}, 2600);
     $('html').removeClass('nprogress-busy');
     $('#nprogress').remove();
+        
+    }
+  NProgress.remove = function() {
+      $("#text").animate({"opacity":"0","letter-spacing":"10px"});
+
+            setTimeout(dispear,1000);               
 
   };
 
