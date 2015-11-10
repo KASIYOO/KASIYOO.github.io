@@ -336,6 +336,7 @@ font-size: 7.4rem;
     margin: 0% auto 0px auto;
     position: relative;
     z-index: 0;
+    background-color: #fff;
 }
 #fade {
     width: 100%;
