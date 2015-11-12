@@ -9,6 +9,8 @@ html
     height: 100%;
     width: 100%;
     background-attachment: fixed;
+ font-family: 'Raleway', 'Helvetica', 'Arial',' sans-serif';
+
     
 }
 h1,
@@ -28,8 +30,8 @@ a,th,td,table {
 
 html {
     font-size: 62.5%;
-    transition: right 0.3s ease-out;
-    -webkit-transition: right 0.3s ease-out;
+    transition: right 0.5s ease;
+    -webkit-transition: right 0.5s ease;
     right: 0;
 }
 body {
@@ -77,7 +79,7 @@ body {
 }
 #text {
     display: inline-block;
-        font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', 'Arial',' sans-serif';
 font-size: 7.4rem;
     font-weight: 700;
     position: relative;
@@ -101,9 +103,8 @@ font-size: 7.4rem;
     }
     
     .logo {
-        font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', 'Arial','sans-serif';
         font-size: 65px;
-        color: #242323;
         font-weight: 800;
         line-height: 100px;
         position: absolute;
@@ -150,8 +151,8 @@ font-size: 7.4rem;
         background-repeat: no-repeat;
         /*        background-color: #5683e5;*/
         overflow-x: hidden;
-        transition: right 0.3s ease-out;
-        -webkit-transition: right 0.3s ease-out;
+    transition: right 0.5s ease;
+    -webkit-transition: right 0.5s ease;
         right: 0;
     }
     .grid {
@@ -229,8 +230,8 @@ font-size: 7.4rem;
         background-repeat: no-repeat;
         /*        background-color: #5683e5;*/
         overflow-x: hidden;
-        transition: right 0.3s ease-out;
-        -webkit-transition: right 0.3s ease-out;
+      transition: right 0.5s ease;
+    -webkit-transition: right 0.5s ease;
         right: 0;
     }
     .contact_me embed {
@@ -315,7 +316,7 @@ font-size: 7.4rem;
         text-align: left;
         bottom: -8px;
         color: #fff;
-        font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', 'Arial','sans-serif';
         font-size: 0.8rem;
         left: -215%;
         margin-bottom: 70px;
@@ -369,7 +370,7 @@ font-size: 7.4rem;
     height: 100%;
     background-color: #242323;
     z-index: 120;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', 'Arial',' sans-serif';
     color: #fff;
     text-align: center;
     position: fixed;
@@ -428,7 +429,9 @@ font-size: 7.4rem;
 
 .logo a {
     color: #242323;
-    position: relative;
+    position: relative;      
+/*    color: #a0a0a0;*/
+
 }
 #k {
     position: relative;
@@ -572,7 +575,7 @@ font-size: 7.4rem;
     right: 0;
     width: 300px;
     z-index: -4;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', 'Arial',' sans-serif';
     font-weight: 600;
     font-style: normal;
     -webkit-transition: left 0.4s linear;
@@ -779,8 +782,8 @@ font-size: 7.4rem;
     overflow-x: hidden;
     width: 100%;
     z-index: -3;
-    transition: right 0.3s ease-out;
-    -webkit-transition: right 0.3s ease-out;
+  transition: right 0.5s ease;
+    -webkit-transition: right 0.5s ease;
     right: 0;
 }
 #scene {
@@ -885,7 +888,7 @@ font-size: 7.4rem;
     letter-spacing: 6px;
     line-height: 75px;
     display: inline;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Helvetica', 'Arial',' sans-serif';
     font-weight: 400;
     transition: all 0.35s ease-out 0.25s;
     -o-transition: all 0.35s ease-out 0.25s;
@@ -1097,8 +1100,9 @@ footer span {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: url(/image/skill.jpg);
+    background-image: url(/image/subpage_bk.jpg);
     background-size: cover;
+/*    transition: top 0.6s ease;*/
 }
 .sub_container-1 {
     width: 100%;
@@ -1106,6 +1110,11 @@ footer span {
     /*     background-image: url(/svg/portfolio_bg-01.png);*/
     height: 500px;
     position: relative;
+    line-height: 500px;
+    font-family: "Roboto Condensed",sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
 }
 .por_rep {
     max-width: 80%;
@@ -1118,10 +1127,10 @@ footer span {
     position: absolute;
     z-index: -1;
     left: 0;
-    opacity: 0.1;
+    opacity: 0.5;
     top: 0;
     margin: 0;
-    background-image: url(/svg/portfolio_bg.svg);
+    background-image: url(/svg/portfolio_bg2.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1211,8 +1220,27 @@ p video {
 
 
 #preload-01 {
-    background: url(/image/skill.jpg) no-repeat -9999px -9999px; 
+    background: url(/image/subpage_bk.jpg) no-repeat -9999px -9999px; 
 
 }
 
 
+
+.sub_header {
+    width: 100%;
+    height:  400px;
+    background-color: #fff;
+    line-height: 400px;
+    font-size: 16px;
+    text-align: center;
+    color: #5683e5;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+
+    
+}
+.sub_header span{
+    color: #242323;
+    font-weight: 300
+    
+}
