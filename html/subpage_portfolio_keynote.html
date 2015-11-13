@@ -68,17 +68,17 @@
             </div>
         </div>
         <div id="container_var" class="paper">
-                              <div id="background">
+            <div id="background">
             </div>
 
             <div class="sub_header">PRESENTATION <span>DESIGN</span></div>
 
             <div class="sub_container-1">
-           
-               /2013.03/
-                                          <div class="pro_background"></div>
 
-<!--                <embed class="por_rep" src="/svg/PORTFOLIO_PRESENTATION.svg">-->
+                /2013.03/
+                <div class="pro_background"></div>
+
+                <!--                <embed class="por_rep" src="/svg/PORTFOLIO_PRESENTATION.svg">-->
             </div>
 
 
@@ -94,13 +94,21 @@
                         if (nun++ % 2 === 0) {
                             document.getElementById('keynoteV').play();
                             document.getElementById('musical').pause();
-                            $musical.attr({"src": "/image/musical%20audio.gif" });
+                            $musical.attr({
+                                "src": "/image/musical%20audio.gif"
+                            });
                         } else {
                             document.getElementById('keynoteV').pause();
                             document.getElementById('musical').play();
-                            $musical.attr({"src": "/image/muscial-audio.gif"});
+                            $musical.attr({
+                                "src": "/image/muscial-audio.gif"
+                            });
+
+
+
                         }
                     });
+
                 </script>
             </p>
             <!--
@@ -116,16 +124,19 @@
 
             <footer> <span class="claim"><em>Created by KASIYOO</em></span>
             </footer>
-            <script>  var $back = $("#background");
-          $(window).scroll(function() {
-         var toped = $(window).scrollTop();
-         var container_Y = toped * 0.4+150+'px';
-         $back.css({
-             top: container_Y
+            <script>
+                var $back = $("#background");
+                $(window).scroll(function() {
+                    var toped = $(window).scrollTop();
+                    var container_Y = toped * 0.4 + 150 + 'px';
+                    $back.css({
+                        top: container_Y
 
-         });
+                    });
 
-     });</script>
+                });
+
+            </script>
 
         </div>
 

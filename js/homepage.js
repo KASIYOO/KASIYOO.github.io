@@ -11,15 +11,11 @@ jQuery(document).ready(function ($) {
     var $a_OO = $("#oo");
     var ico = $(".iconmenu");
     var $menu = $(".menu");
-    var $menuUl = $(".menu ul");
-    var $header = $(".header");
-    var $moveZ = $(".moveZone");
     var $musical = $(".menu_tool img");
     var $move = $(".me,html,#container");
     //当鼠标点击菜单
     var num = 0;
     var mum = 0;
-
     function keepPositioin() {
         var he_width = $(document).width();
         var l_r_width = (he_width - 1000) / 2;
@@ -34,6 +30,8 @@ jQuery(document).ready(function ($) {
     document.oncontextmenu = function () {
         return false;
     };
+    
+    // stop refresh
     document.onkeydown = function (event) {
         var e = event || window.event || arguments.callee.caller.arguments[0];
         if (e && e.keyCode == 116) {
@@ -163,8 +161,8 @@ jQuery(document).ready(function ($) {
     });
     $(window).scroll(function () {
         var toped = $(window).scrollTop();
+        
         //           bgstyleChange();
-
         if (toped > 0) {
             $("#goTopBtn").css("display", "block");
         } else {
@@ -407,7 +405,7 @@ jQuery(document).ready(function ($) {
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
-   
+   //image preload
     var preloadimages=function(){
        for(var i=0; i<arguments.length;i++ ){
            $("<img/>").attr("src",arguments[i]);
@@ -415,14 +413,10 @@ jQuery(document).ready(function ($) {
    };
     preloadimages("/image/prolifoto_web.jpg","/image/prolifoto_vi.jpg","/image/364554.jpg","/image/subpage_bk.jpg");
    
+    // loading bar done
     $(window).load(function () {
     NProgress.done();
-   
-        
-        
-        
-        
-
+ 
 });
 
 });
