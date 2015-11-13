@@ -332,6 +332,8 @@ jQuery(document).ready(function ($) {
             $(".home_container_3_title").html(str4);
         }
     });
+      
+
     $(document).pjax('a[data-pjax]', '#container_var', {
         fragment: '#container_var',
         timeout: 5000
@@ -403,9 +405,24 @@ jQuery(document).ready(function ($) {
             }, 1000);
         });
     }
+
     google.maps.event.addDomListener(window, 'load', initialize);
-});
-$(window).load(function () {
+   
+    var preloadimages=function(){
+       for(var i=0; i<arguments.length;i++ ){
+           $("<img/>").attr("src",arguments[i]);
+       }
+   };
+    preloadimages("/image/prolifoto_web.jpg","/image/prolifoto_vi.jpg","/image/364554.jpg","/image/subpage_bk.jpg");
+   
+    $(window).load(function () {
     NProgress.done();
+   
+        
+        
+        
+        
+
+});
 
 });
