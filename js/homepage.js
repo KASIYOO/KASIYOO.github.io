@@ -1,5 +1,4 @@
 jQuery(document).ready(function ($) {
-
     NProgress.start();
     //iconmenu animate
     var $logo_a = $("#logo");
@@ -16,17 +15,17 @@ jQuery(document).ready(function ($) {
     //当鼠标点击菜单
     var num = 0;
     var mum = 0;
-    function keepPositioin() {
+    function keepPositioin(a) {
         var he_width = $(document).width();
         var l_r_width = (he_width - 1000) / 2;
         var container_2_height = $("#home_container_2").height();
         $(".keepPosition").css({
             "width": l_r_width + 'px',
-            "height": container_2_height + 'px'
+            "height": Number(a)+ container_2_height + 'px'
         });
 
     }
-    keepPositioin();
+    keepPositioin(0);
     document.oncontextmenu = function () {
         return false;
     };
@@ -38,69 +37,6 @@ jQuery(document).ready(function ($) {
             return false;
         }
     };
-    //    
-    //   function bgstyleChange(){
-    //   var styleChange_left= $("#home_container_2").offset().left;
-    //    var styleChange_top=$("#home_container_2").offset().top;
-    //    var styleChange=$("#styleChange");
-    //    
-    //    styleChange.css({"left":styleChange_left,"top":styleChange_top});}
-    //    bgstyleChange();
-
-    //make the "div" in the center
-    $.fn.center = function () {
-        return this.each(function () {
-            var $this = $(this),
-                parent = $this.parent(),
-                topPos,
-                topMargin,
-                leftMargin,
-                resizeTimeout;
-            if (parent.is("body:not(.root-height-set)")) {
-                $("html,body").css("height", "100%").addClass("root-height-set");
-            }
-            if ($this.css("position") === "absolute" || $this.css("position") === "fixed") {
-                topPos = "50%";
-                topMargin = "-" + Math.round($this.outerHeight() / 2) + "px";
-                leftMargin = "-" + Math.round($this.outerWidth() / 2) + "px";
-                $this.css({
-                    "left": "50%",
-                    "margin-left": leftMargin
-                });
-            } else {
-                topPos = Math.floor((parent.height() - $this.outerHeight()) / 2);
-                topMargin = "auto";
-                $this.css({
-                    "position": "relative",
-                    "margin-left": "auto",
-                    "margin-right": "auto"
-                });
-            }
-            $this.css({
-                "top": topPos,
-                "margin-top": topMargin
-            });
-            $(window).resize(function () {
-                if (resizeTimeout) {
-                    clearTimeout(resizeTimeout);
-                }
-                resizeTimeout = setTimeout(function () {
-                    if ($this.css("position") === "absolute") {
-                        topMargin = "-" + Math.round($this.outerHeight() / 2) + "px";
-                        leftMargin = "-" + Math.round($this.outerWidth() / 2) + "px";
-                        $this.css({
-                            "margin-left": leftMargin,
-                            "margin-top": topMargin
-                        });
-                    } else {
-                        topPos = Math.floor((parent.height() - $this.outerHeight()) / 2);
-                        $this.css("top", topPos);
-                    }
-                }, 150);
-            });
-        });
-    };
-    $("#centerdiv").center();
 
     //stop musical
     $musical.click(function (e) {
@@ -120,14 +56,16 @@ jQuery(document).ready(function ($) {
         }
 
     });
-
     //animation for menu
-    ico.click(function (e) {
+    ico.click(
+        function (e) {
+
         if (num++ % 2 === 0) {
             $menu.addClass("ox");
             ico.children().css({
                 "background-color": "#fff"
             });
+
             $("#goTopBtn").css({
                 "color": "#fff"
             });
@@ -160,9 +98,26 @@ jQuery(document).ready(function ($) {
              },500);
     });
     $(window).scroll(function () {
-        var toped = $(window).scrollTop();
         
+   
+             var  viewH =$(window).height();//可见高度  
+            var contentH =$(document).height();//内容高度 
+             var toped = $(window).scrollTop();
+
+            if(contentH - viewH - toped <=200) {
+                $("#goTopBtn").css({
+                "color": "#fff"
+            });
+            }else{
+              $("#goTopBtn").css({
+                "color": "#242323"
+            });  
+                
+            }
+            
+         
         //           bgstyleChange();
+ 
         if (toped > 0) {
             $("#goTopBtn").css("display", "block");
         } else {
@@ -303,6 +258,12 @@ jQuery(document).ready(function ($) {
             });
         }
     );
+    //butto_more
+    $("#button_more").click(function(){
+     $("#no_6").slideDown();
+      keepPositioin(150);
+    });
+    
     //moblie layout
     var str = "<embed  class='str'  id='mobile_port_title'  src='/svg/mobile_title_portfolio.svg'>";
     var str2 = "<embed class='str2' id='port_title' src='/svg/title_portfolio.svg'>";
@@ -318,7 +279,7 @@ jQuery(document).ready(function ($) {
         $(".home_container_3_title").html(str4);
     }
     $(window).bind('resize', function () {
-        keepPositioin();
+        keepPositioin(0);
         var win_width = $(window).width();
         if (win_width < 640 && (!$("#mobile_port_title").hasClass('str') || !("#mobile_about_title").hasClass("str"))) {
             $("#port_title #about_title").remove();
@@ -334,13 +295,13 @@ jQuery(document).ready(function ($) {
 
     $(document).pjax('a[data-pjax]', '#container_var', {
         fragment: '#container_var',
-        timeout: 5000
+        timeout: 6000
     });
     $(document).on('pjax:start', function () {
         $('#fade').show();
     });
     $(document).on('pjax:end', function () {
-        $('#fade').fadeOut(2500);
+        $('#fade').fadeOut(1000);
     });
     var map;
     var myLatLng = new google.maps.LatLng(38.274723, 140.867572);
@@ -365,7 +326,7 @@ jQuery(document).ready(function ($) {
          }, {
             featureType: 'water',
             stylers: [{
-                color: '#4d97e3'
+                color: '#30b7ff'
              }]
          }];
         var mapOptions = {
@@ -411,10 +372,11 @@ jQuery(document).ready(function ($) {
            $("<img/>").attr("src",arguments[i]);
        }
    };
-    preloadimages("/image/prolifoto_web.jpg","/image/prolifoto_vi.jpg","/image/364554.jpg","/image/subpage_bk.jpg");
    
     // loading bar done
     $(window).load(function () {
+            preloadimages("/image/prolifoto_web.jpg","/image/prolifoto_vi.jpg","/image/%E7%A9%BA%E6%B0%94%E5%87%80%E5%8C%96.jpg","/image/subpage_bk.jpg","/image/portfolio_ai.jpg","/image/display.jpg");
+
     NProgress.done();
  
 });

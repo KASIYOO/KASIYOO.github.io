@@ -7,10 +7,10 @@
 
     <title>he</title>
     <script src="/js/jquery-1.11.3.min.js"></script>
-      <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300italic,300,700italic' rel='stylesheet' type='text/css'>    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300italic,300,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,800,900,700,300,100,200' rel='stylesheet' type='text/css'>
 
-    <link href="/css/subpage.css" rel="stylesheet" type="text/css">
+    <link href="/css/homepage.css" rel="stylesheet" type="text/css">
      <link rel="stylesheet" href="/css/nprogress.css" type="text/css"/>
             <script src="/js/nprogress.js" type="text/javascript"></script>
                         <script src="/js/jquery.pjax.js"></script>
@@ -19,54 +19,134 @@
 </head>
 
 <body>
-    <!--loading-->
-    <div class="moveZone">
+<div class="update" id="update">
+        <div class="warning" id="warning">
+        </div>
+        <a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html"> <span class="icon-chrome"></span></a>
+        <a href="http://www.firefox.com.cn/"> <span class="icon-firefox"></span></a>
+        <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"> <span class="icon-IE"></span></a>
+    </div>
+    <table id="mask"><tr><td><div id="text">KASIYOO</div></td></tr></table>
 
-    <!--loading-->
-   
-      <div class="header">
+    <div id="fade"></div>
+    <div class="header">
         <div class="logo">
-            <a id="logo" href="he.html"><span id="k">K</span><span id="a">A</span><span id="s">S</span><span id="i">I</span><span id="y">Y</span><span id="o">O</span><span id="oo">O</span>
-        </a><hr></div>
-
-
+            <a id="logo" href="/index.html#home_container-1"><span id="k">K</span><span id="a">A</span><span id="s">S</span><span id="i">I</span><span id="y">Y</span><span id="o">O</span><span id="oo">O</span>
+        </a>
+        </div>
     </div>
     <div class="border">
-<!--       <span class="menuText" id="menuText_top">ME</span>-->
         <div class="iconmenu">
             <span id="top"></span>
             <div class="line"></div>
             <span id="bottom"></span>
 
         </div>
-<!--        <span class="menuText" id="menuText_bottom">NU</span>-->
-   </div>
+    </div>
     <div class="menu">
 
-        <ul>
-            <li id="home"><a href="#container-1">HOME</a></li>
-                        <li><a href="#container_3">ABOUT ME</a></li>
-
-            <li><a href="#">POTOFOLIO</a></li>
-                        <li><a  class="contact" href="html/contact.html">CONTACT</a></li>
+         <ul>
+            <li id="home">
+                <a href="/index.html#home_container-1">
+                    <div>
+                        <span>HOME</span>
+                        <span>HOME</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/index.html#home_container_3">
+                    <div>
+                        <span> ABOUT ME</span>
+                        <span> ABOUT ME</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/index.html#home_container_2">
+                    <div>
+                        <span>POTOFOLIO</span>
+                        <span>POTOFOLIO</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="contact" href="/index.html#home_container_4">
+                    <div>
+                        <span>CONTACT ME</span>
+                        <span>CONTACT ME</span>
+                    </div>
+                </a>
+            </li>
         </ul>
         <ul>
-            <li><a href="html/subpage_portfolio_vi.html">VISUAL IDENTITY </a></li>
-            <li><a href="html/subpage_portfolio_ai.html">ILLUSTRATION</a></li>
-            <li><a href="html/subpage_portfolio_keynote.html">PRESENTATION</a></li>
-            <li><a href="html/subpage_portfolio_web.html">WEB DESIGN</a></li>
-            <li><a href="html/subpage_portfolio_ui.html">UI DESIGN</a></li>
-            <li><a href="html/subpage_portfolio_pro.html">POSTER DESIGN</a></li>
-</ul>
-    <div class="menu_tool">
-       <span class="contact">
-        <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about"><span class="icon-facebook2"></span></a>
-        <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about"><span class="icon-twitter2"></span></a>
-        <a href="mailto:624722486@qq.com"><span class="icon-mail"></span></a></span>
+            <li>
+                <a href="/html/subpage_portfolio_ui.html" data-pjax>
+                    <div>
+                        <span>UI DESIGN</span>
+                        <span>UI DESIGN</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="preload_web" href="/html/subpage_portfolio_web.html" data-pjax>
+                    <div>
+                        <span>WEB DESIGN</span>
+                        <span>WEB DESIGN</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/html/subpage_portfolio_icon.html" data-pjax>
+                    <div>
+                        <span>ICON DESIGN</span>
+                        <span>ICON DESIGN</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/html/subpage_portfolio_ai.html" data-pjax>
+                    <div>
+                        <span>ILLUSTRATION</span>
+                        <span>ILLUSTRATION</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/html/subpage_portfolio_keynote.html" data-pjax>
+                    <div>
+                        <span>PRESENTATION</span>
+                        <span>PRESENTATION</span>
+                    </div>
+                </a>
+            </li>
 
-        <img src="/image/muscial-audio.gif">
+
+            <li>
+                <a href="/html/subpage_portfolio_poster.html" data-pjax>
+                    <div>
+                        <span>POSTER DESIGN</span>
+                        <span>POSTER DESIGN</span>
+                    </div>
+                </a>
+            </li>
+               <li>
+                <a href="/html/subpage_portfolio_vi.html" data-pjax>
+                    <div>
+                        <span>VISUAL IDENTITY </span>
+                        <span>VISUAL IDENTITY </span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="menu_tool">
+            <span class="contact">
+        <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-facebook2"></span></a>
+            <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-twitter2"></span></a>
+            <a href="mailto:624722486@qq.com"><span class="icon-mail"></span></a></span>
+            <img src="/image/muscial-audio.gif">
+        </div>
     </div>
-         </div>
          
          
         <div id="container_var" class="paper">
@@ -86,19 +166,18 @@
 
     
     <div class="sub_container_2 vi">
-        <img src="/image/prolifoto_vi.jpg"> </div>
+        <img src="/image/portfolio.jpg"> </div>
 
 
     <div class="sub_container_3">
-        <a class="pro" data-pjax href="subpage_portfolio_poster.html">PRE</a>
-        <a class="next he" data-pjax href="subpage_portfolio_ai.html">NEXT</a>
+        <a class="pro" data-pjax href="subpage_portfolio_icon.html">PRE</a>
+        <a class="next he" data-pjax href="subpage_portfolio_web.html">NEXT</a>
 
 
     </div>
-        <footer>
+        <footer class="sub_footer">
                 <span class="claim"><em>Created by KASIYOO</em></span>
-
-        </footer>
+            </footer>
            <script>  var $back = $("#background");
           $(window).scroll(function() {
          var toped = $(window).scrollTop();
@@ -117,7 +196,6 @@
 
 
 
-    </div>
 </body>
 
 </html>

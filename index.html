@@ -7,15 +7,19 @@
     <meta name="author" content="kasiyoo" />
     <meta name="generation" content="Brackets1.4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>webpage design</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300italic,300,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,800,900,700,300,100,200' rel='stylesheet' type='text/css'>
+    <title>kasiyoo</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300italic,300,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,800,900,700,300,100,200" rel="stylesheet" type="text/css">
     <script src="http://maps.google.cn/maps/api/js?key=AIzaSyAEpOrlZ05JoR0naq2MLldPwFK5v4FDyHg"></script>
     <link href="css/homepage.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/nprogress.css" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+
 </head>
 
 <body>
+
     <div class="update" id="update">
         <div class="warning" id="warning">
         </div>
@@ -23,8 +27,17 @@
         <a href="http://www.firefox.com.cn/"> <span class="icon-firefox"></span></a>
         <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"> <span class="icon-IE"></span></a>
     </div>
-    <table id="mask"><tr><td><div id="text">KASIYOO</div></td></tr></table>
+    <table id="mask">
+        <tr>
+            <td>
+                <div id="text">KASIYOO</div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        window.location.href = "/index.html#home_container-1"
 
+    </script>
     <div id="fade"></div>
     <div class="header">
         <div class="logo">
@@ -44,7 +57,7 @@
 
         <ul>
             <li id="home">
-                <a href="html/index_mirror.html" >
+                <a id="ho" href="/index.html#home_container-1">
                     <div>
                         <span>HOME</span>
                         <span>HOME</span>
@@ -52,7 +65,7 @@
                 </a>
             </li>
             <li>
-                <a href="/index.html#home_container_3" >
+                <a id="ab" href="#home_container_3">
                     <div>
                         <span> ABOUT ME</span>
                         <span> ABOUT ME</span>
@@ -60,7 +73,7 @@
                 </a>
             </li>
             <li>
-                <a href="/index.html#home_container_2" >
+                <a id="po" href="/index.html#home_container_2">
                     <div>
                         <span>POTOFOLIO</span>
                         <span>POTOFOLIO</span>
@@ -68,24 +81,40 @@
                 </a>
             </li>
             <li>
-                <a class="contact" href="/index.html#home_container_4" >
+                <a id="co" class="contact" href="/index.html#home_container_4">
                     <div>
-                        <span>CONTACT</span>
-                        <span>CONTACT</span>
+                        <span>CONTACT ME</span>
+                        <span>CONTACT ME</span>
                     </div>
                 </a>
             </li>
         </ul>
         <ul>
-            <li>
-                <a href="/html/subpage_portfolio_vi.html" data-pjax>
+              <li>
+                <a href="/html/subpage_portfolio_ui.html" data-pjax>
                     <div>
-                        <span>VISUAL IDENTITY </span>
-                        <span>VISUAL IDENTITY </span>
+                        <span>UI_I DESIGN</span>
+                        <span>UI_I DESIGN</span>
                     </div>
                 </a>
             </li>
             <li>
+                <a  href="/html/subpage_portfolio_web.html" data-pjax>
+                    <div>
+                        <span>WEB DESIGN</span>
+                        <span>WEB DESIGN</span>
+                    </div>
+                </a>
+            </li>
+                 <li>
+                <a href="/html/subpage_portfolio_icon.html" data-pjax>
+                    <div>
+                        <span>UI_II DESIGN</span>
+                        <span>UI_II DESIGN</span>
+                    </div>
+                </a>
+            </li>
+             <li>
                 <a href="/html/subpage_portfolio_ai.html" data-pjax>
                     <div>
                         <span>ILLUSTRATION</span>
@@ -101,23 +130,7 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a class="preload_web" href="/html/subpage_portfolio_web.html" data-pjax>
-                    <div>
-                        <span>WEB DESIGN</span>
-                        <span>WEB DESIGN</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="/html/subpage_portfolio_ui.html" data-pjax>
-                    <div>
-                        <span>UI DESIGN</span>
-                        <span>UI DESIGN</span>
-                    </div>
-                </a>
-            </li>
-            <li>
+             <li>
                 <a href="/html/subpage_portfolio_poster.html" data-pjax>
                     <div>
                         <span>POSTER DESIGN</span>
@@ -125,13 +138,27 @@
                     </div>
                 </a>
             </li>
+             
+            <li>
+                <a href="/html/subpage_portfolio_vi.html" data-pjax>
+                    <div>
+                        <span>VISUAL IDENTITY </span>
+                        <span>VISUAL IDENTITY </span>
+                    </div>
+                </a>
+            </li>
+         
+           
+            
+         
+           
         </ul>
         <div class="menu_tool">
             <span class="contact">
         <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-facebook2"></span></a>
             <a href="https://www.facebook.com/profile.php?id=100008475558032&sk=about" target="_blank"><span class="icon-twitter2"></span></a>
             <a href="mailto:624722486@qq.com"><span class="icon-mail"></span></a></span>
-            <img src="/image/muscial-audio.gif">
+            <img src="image/muscial-audio.gif">
         </div>
     </div>
     <div class="moveZone" id="preload-01 ">
@@ -155,59 +182,86 @@
 
                 <div class="home_container_2_text">
                     <ul class="grid cs-style-3">
-                        <li>
+                       <li>
                             <figure>
-                                <img src="/image/poster_image.jpg" alt="imageposter">
-                                <figcaption>
-                                    <h2><a data-pjax href="/html/subpage_portfolio_poster.html">POSTER DESIGN</a></h2>
-                                </figcaption>
+                                <img src="image/01.jpg" alt="imageposter">
+                                <a data-pjax href="/html/subpage_portfolio_poster.html">
+                                    <figcaption>
+                                        <h2>POSTER DESIGN</h2>
+                                    </figcaption>
+                                </a>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="/image/ui_image.jpg" alt="imageui">
-                                <figcaption>
-                                    <h2><a data-pjax href="/html/subpage_portfolio_ui.html">UI DESIGN</a></h2>
-                                </figcaption>
+                                <img src="image/02.jpg" alt="imagekeynote">
+                                <a data-pjax href="/html/subpage_portfolio_keynote.html">
+                                    <figcaption>
+                                        <h2>PRESENTATION DESIGN</h2>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </li>
+                        
+                        <li>
+                            <figure>
+                                <img src="image/03.jpg" alt="imageai">
+                                <a data-pjax href="/html/subpage_portfolio_ai.html">
+                                    <figcaption>
+                                        <h2>ILLUSTRATER DESIGN</h2>
+                                    </figcaption>
+                                </a>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="/image/keynote_image.jpg" alt="imagekeynote">
-                                <figcaption>
-                                    <h2><a  data-pjax href="/html/subpage_portfolio_keynote.html">PRESENTATION DESIGN</a></h2>
-                                </figcaption>
+                                <img src="image/04.jpg" alt="imageui">
+                                <a data-pjax href="/html/subpage_portfolio_ui.html">
+                                    <figcaption>
+                                        <h2>UI_I DESIGN</h2>
+                                    </figcaption>
+                                </a>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="image/web_image.jpg" alt="imageweb">
-                                <figcaption>
-                                    <h2><a data-pjax href="/html/subpage_portfolio_web.html">WEB DESIGN</a></h2>
-                                </figcaption>
+                                <img src="image/05.jpg" alt="imageicon">
+                                <a data-pjax href="/html/subpage_portfolio_icon.html">
+                                    <figcaption>
+                                        <h2>UI_II DESIGN</h2>
+                                    </figcaption>
+                                </a>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <img src="image/ai_image.jpg" alt="imageai">
+                        <figure>
+                            <img src="image/06.jpg" alt="imagevi">
+                            <a data-pjax href="/html/subpage_portfolio_vi.html">
                                 <figcaption>
-                                    <h2><a data-pjax href="/html/subpage_portfolio_ai.html">ILLUSTRATER DESIGN</a></h2>
+                                    <h2>VISUAL IDENTITY</h2>
                                 </figcaption>
-                            </figure>
+                            </a>
+                        </figure>
+                        <li>
+
                         </li>
-                        <li>
+                        <li id="no_6">
                             <figure>
-                                <img src="image/vi_image.jpg" alt="imagevi">
-                                <figcaption>
-                                    <h2><a data-pjax href="/html/subpage_portfolio_vi.html">VISUAL IDENTITY</a></h2>
-                                </figcaption>
+                                <img src="image/07.jpg" alt="imageweb">
+                                <a data-pjax href="/html/subpage_portfolio_web.html">
+                                    <figcaption>
+                                        <h2>WEB DESIGN</h2>
+                                    </figcaption>
+                                </a>
                             </figure>
+
                         </li>
 
                     </ul>
                 </div>
             </div>
-            <div class="home_container_2_end"></div>
+            <div class="home_container_2_end">
+                <div id="button_more">MORE</div>
+            </div>
             <div class="home_container_3" name="container_3" id="home_container_3">
                 <div class="home_container_3_title">
                     <embed id="about_title" src="svg/title_about.svg">
@@ -227,32 +281,39 @@
 
                 <div class="map" id="map-canvas">
                 </div>
-                <div class="contact_me">
-                    <embed id="centerdiv" src="svg/CONTACT.svg">
-                </div>
+                <table class="contact_me">
+                    <tr>
+                        <td>
+                            <embed id="centerdiv" src="svg/CONTACT.svg">
+                        </td>
+                    </tr>
+                </table>
             </div>
-            <footer>
+                <footer id="home_footer">
+               <img src="/image/ME.png">
+               <span id="my_word"> In doing we learn. </span>
                 <span class="claim"><em>Created by KASIYOO</em></span>
             </footer>
         </div>
         <div id="goTopBtn"><span class="icon-ctrl"></span></div>
-        <audio id="musical" src="video/Maneater%E5%89%AF%E6%9C%AC.mp3" loop></audio>
+        <audio id="musical" src="video/Maneater.mp3" loop></audio>
+        <script type="text/javascript" src="js/cav.min.js"></script>
+        <script type="text/javascript" src="js/get.js"></script>
 
     </div>
     <!--        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
 
-    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.color.min.js"></script>
     <script src="js/jquery.pjax.min.js"></script>
     <script src="js/nprogress.js"></script>
     <!--    <script type="text/javascript" src="js/paralla.js"></script>-->
-    <script type="text/javascript" src="js/cav.min.js"></script>
-    <script type="text/javascript" src="js/get.js"></script>
+
     <script type="text/javascript" src="js/homepage.js"></script>
 
     <script>
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
+        
 
     </script>
 
